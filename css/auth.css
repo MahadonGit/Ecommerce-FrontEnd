@@ -1,0 +1,109 @@
+/* ==============================
+   GLOBAL AUTH PAGE
+   ============================== */
+
+body {
+    background-color: #f5f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==============================
+   REGISTER CARD
+   ============================== */
+
+.register-card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+
+/* ==============================
+   FORM INPUTS
+   ============================== */
+
+.form-control {
+    min-height: 45px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+
+/* ==============================
+   INPUT GROUP
+   ============================== */
+
+.input-group .form-control {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.password-toggle {
+    min-width: 70px;
+}
+
+
+/* ==============================
+   BUTTON
+   ============================== */
+
+.btn-primary {
+    min-height: 45px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+
+/* ==============================
+   LINKS
+   ============================== */
+
+a {
+    color: #0d6efd;
+}
+
+a:hover {
+    text-decoration: underline !important;
+}
+
+
+/* ==============================
+   ERROR MESSAGE
+   ============================== */
+
+.invalid-feedback {
+    display: none;
+}
+
+.form-control.is-invalid + .invalid-feedback {
+    display: block;
+}
+
+
+/* ==============================
+   GENERAL MESSAGE
+   ============================== */
+
+#message .alert {
+    margin-bottom: 0;
+}
+
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 576px) {
+
+    .register-card {
+        border-radius: 12px;
+    }
+
+}
