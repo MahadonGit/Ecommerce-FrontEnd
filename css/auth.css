@@ -1,109 +1,503 @@
-/* ==============================
-   GLOBAL AUTH PAGE
-   ============================== */
+/* =========================================================
+   ECOMMERCE AUTH THEME
+   Shared by Login + Register
+   ========================================================= */
+
+
+/* =========================================================
+   ROOT VARIABLES
+   ========================================================= */
+
+:root {
+    --primary-color: #5b5ff0;
+    --primary-hover: #474bd8;
+
+    --secondary-color: #7c3aed;
+
+    --background-color: #f4f6fb;
+
+    --card-color: rgba(255, 255, 255, 0.96);
+
+    --text-color: #1f2937;
+    --muted-color: #6b7280;
+
+    --border-color: #e5e7eb;
+
+    --danger-color: #dc3545;
+    --success-color: #198754;
+
+    --input-focus: rgba(91, 95, 240, 0.15);
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
 
 body {
-    background-color: #f5f7fb;
-    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: var(--text-color);
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(91, 95, 240, 0.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(124, 58, 237, 0.12),
+            transparent 35%
+        ),
+        var(--background-color);
 }
 
 
-/* ==============================
-   REGISTER CARD
-   ============================== */
+/* =========================================================
+   AUTH CARD
+   ========================================================= */
 
-.register-card {
-    border: none;
-    border-radius: 18px;
-    overflow: hidden;
+.auth-card {
+    background: var(--card-color);
+
+    border: 1px solid rgba(255, 255, 255, 0.85);
+
+    border-radius: 22px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 20px 50px rgba(31, 41, 55, 0.08),
+        0 8px 20px rgba(31, 41, 55, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 
-/* ==============================
+.auth-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 25px 60px rgba(31, 41, 55, 0.10),
+        0 10px 25px rgba(31, 41, 55, 0.06);
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+.auth-card h2 {
+    color: var(--text-color);
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+
+.auth-card p.text-muted {
+    color: var(--muted-color) !important;
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   FORM LABELS
+   ========================================================= */
+
+.form-label {
+    color: #374151;
+
+    font-size: 0.92rem;
+
+    font-weight: 600;
+
+    margin-bottom: 0.5rem;
+}
+
+
+/* =========================================================
    FORM INPUTS
-   ============================== */
+   ========================================================= */
 
 .form-control {
-    min-height: 45px;
-    border-radius: 8px;
-    border: 1px solid #ced4da;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    min-height: 48px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 10px;
+
+    background-color: #ffffff;
+
+    color: var(--text-color);
+
+    font-size: 0.95rem;
+
+    padding: 0.7rem 0.9rem;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
+
+
+.form-control::placeholder {
+    color: #9ca3af;
+}
+
+
+.form-control:hover {
+    border-color: #c7c9e8;
+}
+
 
 .form-control:focus {
-    border-color: #0d6efd;
-    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+    border-color: var(--primary-color);
+
+    box-shadow:
+        0 0 0 4px var(--input-focus);
+
+    outline: none;
 }
 
 
-/* ==============================
+/* =========================================================
    INPUT GROUP
-   ============================== */
+   ========================================================= */
 
 .input-group .form-control {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
+
+/* =========================================================
+   PASSWORD TOGGLE
+   ========================================================= */
+
 .password-toggle {
-    min-width: 70px;
+    min-width: 72px;
+
+    border: 1px solid var(--border-color);
+
+    border-left: 0;
+
+    border-radius: 0 10px 10px 0;
+
+    background-color: #f9fafb;
+
+    color: #4b5563;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 
-/* ==============================
-   BUTTON
-   ============================== */
+.password-toggle:hover {
+    background-color: #eef0ff;
+
+    color: var(--primary-color);
+
+    border-color: var(--primary-color);
+}
+
+
+/* =========================================================
+   PASSWORD HELP TEXT
+   ========================================================= */
+
+.password-help {
+    display: block;
+
+    margin-top: 0.4rem;
+
+    color: var(--muted-color);
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
 
 .btn-primary {
-    min-height: 45px;
-    border-radius: 8px;
+    min-height: 48px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+
+    font-size: 0.95rem;
+
     font-weight: 600;
+
+    letter-spacing: 0.2px;
+
+    box-shadow:
+        0 8px 18px rgba(91, 95, 240, 0.22);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
 }
 
 
-/* ==============================
+.btn-primary:hover {
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-hover),
+            #6d28d9
+        );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 24px rgba(91, 95, 240, 0.28);
+}
+
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+
+.btn-primary:disabled {
+    opacity: 0.7;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
    LINKS
-   ============================== */
+   ========================================================= */
 
-a {
-    color: #0d6efd;
+.auth-card a {
+    color: var(--primary-color);
+
+    font-weight: 500;
+
+    transition: color 0.2s ease;
 }
 
-a:hover {
+
+.auth-card a:hover {
+    color: var(--primary-hover);
+
     text-decoration: underline !important;
 }
 
 
-/* ==============================
-   ERROR MESSAGE
-   ============================== */
+/* =========================================================
+   FORGOT PASSWORD
+   ========================================================= */
 
-.invalid-feedback {
-    display: none;
-}
-
-.form-control.is-invalid + .invalid-feedback {
-    display: block;
+.forgot-password {
+    font-size: 0.88rem;
 }
 
 
-/* ==============================
-   GENERAL MESSAGE
-   ============================== */
+/* =========================================================
+   AUTH SWITCH
+   ========================================================= */
 
-#message .alert {
+.auth-switch {
+    color: var(--muted-color);
+
+    font-size: 0.9rem;
+}
+
+
+.auth-switch a {
+    margin-left: 4px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ALERTS
+   ========================================================= */
+
+.alert {
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 0.9rem;
+
+    padding: 0.8rem 1rem;
+
     margin-bottom: 0;
 }
 
 
-/* ==============================
-   MOBILE
-   ============================== */
+.alert-danger {
+    background-color: #fff1f2;
+
+    color: #b42318;
+}
+
+
+.alert-success {
+    background-color: #ecfdf3;
+
+    color: #067647;
+}
+
+
+/* =========================================================
+   INVALID INPUT
+   ========================================================= */
+
+.form-control.is-invalid {
+    border-color: var(--danger-color);
+
+    background-image: none;
+}
+
+
+.form-control.is-invalid:focus {
+    border-color: var(--danger-color);
+
+    box-shadow:
+        0 0 0 4px rgba(220, 53, 69, 0.12);
+}
+
+
+/* =========================================================
+   FORM SPACING
+   ========================================================= */
+
+form .mb-3 {
+    margin-bottom: 1.2rem !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .auth-card {
+        border-radius: 18px;
+    }
+
+    .auth-card h2 {
+        font-size: 1.7rem;
+    }
+}
+
 
 @media (max-width: 576px) {
 
-    .register-card {
-        border-radius: 12px;
+    body {
+        background:
+            radial-gradient(
+                circle at top,
+                rgba(91, 95, 240, 0.12),
+                transparent 40%
+            ),
+            var(--background-color);
     }
 
+    .auth-card {
+        border-radius: 16px;
+
+        box-shadow:
+            0 12px 30px rgba(31, 41, 55, 0.08);
+    }
+
+    .auth-card .card-body {
+        padding: 1.5rem !important;
+    }
+
+    .auth-card h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* =========================================================
+   EMAIL CONFIRMATION
+   ========================================================= */
+
+.auth-icon {
+    width: 64px;
+    height: 64px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(91, 95, 240, 0.12),
+            rgba(124, 58, 237, 0.12)
+        );
+
+    color: var(--primary-color);
+
+    font-size: 1.8rem;
+}
+
+
+.resend-section {
+    border-top: 1px solid var(--border-color);
+}
+
+
+#resendButton {
+    color: var(--primary-color);
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+}
+
+
+#resendButton:hover {
+    color: var(--primary-hover);
 }

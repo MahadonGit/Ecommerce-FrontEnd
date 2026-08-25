@@ -2,24 +2,19 @@
 // GET HTML ELEMENTS
 // ==========================================
 
-const registerForm = document.getElementById("registerForm");
+const loginForm = document.getElementById("loginForm");
 
-const firstNameInput = document.getElementById("firstName");
-const lastNameInput = document.getElementById("lastName");
-const emailInput = document.getElementById("email");
+const emailInput =
+    document.getElementById("email");
 
-const passwordInput = document.getElementById("password");
-const confirmPasswordInput =
-    document.getElementById("confirmPassword");
+const passwordInput =
+    document.getElementById("password");
 
 const togglePasswordButton =
     document.getElementById("togglePassword");
 
-const toggleConfirmPasswordButton =
-    document.getElementById("toggleConfirmPassword");
-
-const registerButton =
-    document.getElementById("registerButton");
+const loginButton =
+    document.getElementById("loginButton");
 
 const messageBox =
     document.getElementById("message");
@@ -59,11 +54,8 @@ function removeInputError(input) {
 
 function clearValidation() {
 
-    removeInputError(firstNameInput);
-    removeInputError(lastNameInput);
     removeInputError(emailInput);
     removeInputError(passwordInput);
-    removeInputError(confirmPasswordInput);
 }
 
 
@@ -101,28 +93,11 @@ togglePasswordButton.addEventListener("click", function () {
 });
 
 
-toggleConfirmPasswordButton.addEventListener("click", function () {
-
-    if (confirmPasswordInput.type === "password") {
-
-        confirmPasswordInput.type = "text";
-
-        toggleConfirmPasswordButton.textContent = "Hide";
-
-    } else {
-
-        confirmPasswordInput.type = "password";
-
-        toggleConfirmPasswordButton.textContent = "Show";
-    }
-});
-
-
 // ==========================================
-// REGISTER FORM
+// LOGIN FORM
 // ==========================================
 
-registerForm.addEventListener("submit", function (event) {
+loginForm.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
@@ -135,55 +110,16 @@ registerForm.addEventListener("submit", function (event) {
     // GET VALUES
     // ======================================
 
-    const firstName =
-        firstNameInput.value.trim();
-
-    const lastName =
-        lastNameInput.value.trim();
-
     const email =
         emailInput.value.trim();
 
     const password =
         passwordInput.value;
 
-    const confirmPassword =
-        confirmPasswordInput.value;
-
 
     // ======================================
     // VALIDATION
     // ======================================
-
-    if (firstName === "") {
-
-        showInputError(firstNameInput);
-
-        showMessage(
-            "First name is required.",
-            "danger"
-        );
-
-        firstNameInput.focus();
-
-        return;
-    }
-
-
-    if (lastName === "") {
-
-        showInputError(lastNameInput);
-
-        showMessage(
-            "Last name is required.",
-            "danger"
-        );
-
-        lastNameInput.focus();
-
-        return;
-    }
-
 
     if (email === "") {
 
@@ -245,44 +181,14 @@ registerForm.addEventListener("submit", function (event) {
     }
 
 
-    if (confirmPassword === "") {
-
-        showInputError(confirmPasswordInput);
-
-        showMessage(
-            "Please confirm your password.",
-            "danger"
-        );
-
-        confirmPasswordInput.focus();
-
-        return;
-    }
-
-
-    if (password !== confirmPassword) {
-
-        showInputError(confirmPasswordInput);
-
-        showMessage(
-            "Passwords do not match.",
-            "danger"
-        );
-
-        confirmPasswordInput.focus();
-
-        return;
-    }
-
-
     // ======================================
     // SUCCESSFUL FRONTEND VALIDATION
     // ======================================
 
-    registerButton.disabled = true;
+    loginButton.disabled = true;
 
-    registerButton.textContent =
-        "Creating Account...";
+    loginButton.textContent =
+        "Logging in...";
 
 
     // Temporary simulation
@@ -291,14 +197,14 @@ registerForm.addEventListener("submit", function (event) {
     setTimeout(function () {
 
         showMessage(
-            "Registration successful! Please confirm your email.",
+            "Login successful! API integration will be added later.",
             "success"
         );
 
-        registerButton.disabled = false;
+        loginButton.disabled = false;
 
-        registerButton.textContent =
-            "Create Account";
+        loginButton.textContent =
+            "Login";
 
     }, 1500);
 
