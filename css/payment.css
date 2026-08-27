@@ -435,3 +435,242 @@ body {
         padding: 0.85rem;
     }
 }
+
+/* =========================================================
+   PAYMENT DETAILS
+   ========================================================= */
+
+.payment-details-header h1 {
+    font-weight: 700;
+}
+
+
+.back-link {
+    color: var(--payment-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.back-link:hover {
+    color: var(--payment-primary-hover);
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   PAYMENT HEADER
+   ========================================================= */
+
+.payment-card-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+}
+
+
+.payment-card-header h4 {
+    margin: 0;
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+}
+
+
+.payment-card-header p {
+    margin: 0.35rem 0 0;
+
+    color: var(--payment-muted);
+
+    font-size: 0.88rem;
+}
+
+
+/* =========================================================
+   PAYMENT INFORMATION
+   ========================================================= */
+
+.payment-info {
+    padding: 1rem;
+
+    border:
+        1px solid var(--payment-border);
+
+    border-radius: 12px;
+
+    background: #fafbff;
+}
+
+
+.payment-info > span {
+    display: block;
+
+    margin-bottom: 0.35rem;
+
+    color: var(--payment-muted);
+
+    font-size: 0.8rem;
+
+    font-weight: 500;
+}
+
+
+.payment-info strong {
+    font-size: 1rem;
+}
+
+
+.payment-info p {
+    color: var(--payment-text);
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   PAYMENT STATUS BADGES
+   ========================================================= */
+
+.payment-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 0.35rem 0.8rem;
+
+    border-radius: 999px;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+}
+
+
+.payment-status.pending {
+    background: #fff7ed;
+    color: #c2410c;
+}
+
+
+.payment-status.completed {
+    background: #ecfdf3;
+    color: #067647;
+}
+
+
+.payment-status.failed {
+    background: #fff1f2;
+    color: #b42318;
+}
+
+
+.payment-status.refunded {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.summary-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+
+    color: var(--payment-muted);
+}
+
+
+.summary-row strong {
+    color: var(--payment-text);
+}
+
+
+.summary-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 1.1rem;
+}
+
+
+.summary-total strong {
+    color: var(--payment-primary);
+}
+
+
+/* =========================================================
+   CURRENT STATUS
+   ========================================================= */
+
+.current-status {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 1rem;
+
+    border-radius: 12px;
+
+    background: #f8fafc;
+
+    color: var(--payment-muted);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   FORM SELECT
+   ========================================================= */
+
+.form-select {
+    min-height: 48px;
+
+    border-radius: 10px;
+
+    border-color: var(--payment-border);
+}
+
+
+.form-select:focus {
+    border-color: var(--payment-primary);
+
+    box-shadow:
+        0 0 0 4px rgba(91, 95, 240, 0.12);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .payment-card-header {
+        flex-direction: column;
+    }
+
+    .current-status {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 0.5rem;
+    }
+
+}
