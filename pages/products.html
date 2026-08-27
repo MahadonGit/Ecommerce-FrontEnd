@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Products - Ecommerce Store</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Page Heading -->
+
+    <h1>Our Products</h1>
+
+    <p>Browse our available products.</p>
+
+
+    <!-- Search -->
+
+    <div>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products">
+
+        <button id="searchButton">
+            Search
+        </button>
+
+    </div>
+
+
+    <!-- Sorting -->
+
+    <div>
+
+        <label for="sortBy">
+            Sort By:
+        </label>
+
+        <select id="sortBy">
+
+            <option value="name">
+                Name
+            </option>
+
+            <option value="price">
+                Price
+            </option>
+
+            <option value="stockQuantity">
+                Stock
+            </option>
+
+            <option value="createdDate">
+                Date
+            </option>
+
+        </select>
+
+
+        <select id="sortOrder">
+
+            <option value="asc">
+                Ascending
+            </option>
+
+            <option value="desc">
+                Descending
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Products -->
+
+    <div id="productsContainer">
+
+        <!-- Products will be added here using JavaScript -->
+
+    </div>
+
+
+    <!-- Pagination -->
+
+    <div id="pagination">
+
+        <!-- Pagination buttons will be added here -->
+
+    </div>
+
+
+    <script src="../js/products.js"></script>
+
+</body>
+
+</html>
