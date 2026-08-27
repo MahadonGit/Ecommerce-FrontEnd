@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - ECommerce</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+    <div class="container-fluid py-4">
+
+        <div class="admin-header">
+            <div>
+                <h1>Admin Dashboard</h1>
+                <p>Manage your ECommerce store.</p>
+            </div>
+
+            <span class="admin-badge">
+                Administrator
+            </span>
+        </div>
+
+
+        <div class="row g-4 mb-4">
+
+            <div class="col-sm-6 col-xl-3">
+                <div class="admin-stat-card">
+                    <span>Total Customers</span>
+                    <strong>1,248</strong>
+                    <small>+12% this month</small>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+                <div class="admin-stat-card">
+                    <span>Total Products</span>
+                    <strong>356</strong>
+                    <small>24 recently added</small>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+                <div class="admin-stat-card">
+                    <span>Total Orders</span>
+                    <strong>2,481</strong>
+                    <small>184 this month</small>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+                <div class="admin-stat-card">
+                    <span>Revenue</span>
+                    <strong>$48,920</strong>
+                    <small>+18% this month</small>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-8">
+
+                <div class="admin-card">
+
+                    <div class="admin-card-header">
+                        <h4>Recent Orders</h4>
+
+                        <a href="admin-orders.html">
+                            View All
+                        </a>
+                    </div>
+
+                    <div class="table-responsive">
+
+                        <table class="table align-middle">
+
+                            <thead>
+                                <tr>
+                                    <th>Order</th>
+                                    <th>Customer</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>#1045</td>
+                                    <td>Mahad Abrar</td>
+                                    <td>$150.00</td>
+                                    <td>
+                                        <span class="status completed">
+                                            Completed
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#1044</td>
+                                    <td>Ahmed</td>
+                                    <td>$89.99</td>
+                                    <td>
+                                        <span class="status pending">
+                                            Pending
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#1043</td>
+                                    <td>Ali</td>
+                                    <td>$210.50</td>
+                                    <td>
+                                        <span class="status processing">
+                                            Processing
+                                        </span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <div class="admin-card">
+
+                    <div class="admin-card-header">
+                        <h4>Quick Actions</h4>
+                    </div>
+
+                    <div class="quick-actions">
+
+                        <a href="admin-products.html">
+                            Add / Manage Products
+                        </a>
+
+                        <a href="admin-categories.html">
+                            Manage Categories
+                        </a>
+
+                        <a href="admin-users.html">
+                            Manage Users
+                        </a>
+
+                        <a href="admin-orders.html">
+                            Manage Orders
+                        </a>
+
+                        <a href="admin-payments.html">
+                            Manage Payments
+                        </a>
+
+                        <a href="admin-notifications.html">
+                            Send Notification
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
