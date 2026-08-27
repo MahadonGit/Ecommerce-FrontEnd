@@ -1,0 +1,445 @@
+/* =========================================================
+   NOTIFICATION PAGE
+   ========================================================= */
+
+:root {
+    --notification-primary: #5b5ff0;
+    --notification-primary-hover: #474bd8;
+
+    --notification-background: #f5f7fb;
+
+    --notification-card: #ffffff;
+
+    --notification-text: #1f2937;
+    --notification-muted: #6b7280;
+
+    --notification-border: #e5e7eb;
+
+    --notification-unread:
+        rgba(91, 95, 240, 0.06);
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+    min-height: 100vh;
+
+    margin: 0;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: var(--notification-text);
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(91, 95, 240, 0.10),
+            transparent 30%
+        ),
+        var(--notification-background);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.notification-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+}
+
+
+.notification-title {
+    margin: 0;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+}
+
+
+.notification-subtitle {
+    margin-top: 0.4rem;
+
+    margin-bottom: 0;
+
+    color: var(--notification-muted);
+}
+
+
+/* =========================================================
+   HEADER BUTTON
+   ========================================================= */
+
+.notification-header .btn {
+    border-radius: 10px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.notification-summary {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1.25rem;
+
+    background: #ffffff;
+
+    border: 1px solid var(--notification-border);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(31, 41, 55, 0.05);
+}
+
+
+.summary-icon {
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        rgba(91, 95, 240, 0.10);
+
+    font-size: 1.4rem;
+}
+
+
+/* =========================================================
+   FILTERS
+   ========================================================= */
+
+.notification-filters {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.6rem;
+}
+
+
+.filter-btn {
+    border: 1px solid var(--notification-border);
+
+    background: #ffffff;
+
+    color: var(--notification-muted);
+
+    border-radius: 999px;
+
+    padding: 0.5rem 1rem;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.filter-btn:hover {
+    border-color:
+        var(--notification-primary);
+
+    color:
+        var(--notification-primary);
+}
+
+
+.filter-btn.active {
+    background:
+        var(--notification-primary);
+
+    border-color:
+        var(--notification-primary);
+
+    color:
+        #ffffff;
+}
+
+
+/* =========================================================
+   NOTIFICATION CARD
+   ========================================================= */
+
+.notification-card {
+    display: flex;
+
+    gap: 1rem;
+
+    padding: 1.25rem;
+
+    margin-bottom: 1rem;
+
+    border: 1px solid var(--notification-border);
+
+    border-radius: 16px;
+
+    background:
+        var(--notification-card);
+
+    box-shadow:
+        0 8px 25px rgba(31, 41, 55, 0.04);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.notification-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(31, 41, 55, 0.07);
+}
+
+
+/* =========================================================
+   UNREAD
+   ========================================================= */
+
+.notification-card.unread {
+    background:
+        var(--notification-unread);
+
+    border-left:
+        4px solid var(--notification-primary);
+}
+
+
+.notification-card.read {
+    opacity: 0.82;
+}
+
+
+/* =========================================================
+   STATUS DOT
+   ========================================================= */
+
+.notification-status {
+    flex: 0 0 auto;
+
+    width: 10px;
+
+    height: 10px;
+
+    margin-top: 0.5rem;
+
+    border-radius: 50%;
+
+    background:
+        transparent;
+}
+
+
+.notification-card.unread .notification-status {
+    background:
+        var(--notification-primary);
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.notification-content {
+    flex: 1;
+}
+
+
+.notification-top {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+}
+
+
+.notification-card-title {
+    margin: 0;
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+}
+
+
+.notification-type {
+    display: inline-block;
+
+    margin-top: 0.4rem;
+
+    padding: 0.2rem 0.6rem;
+
+    border-radius: 999px;
+
+    background:
+        #eef0ff;
+
+    color:
+        var(--notification-primary);
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+}
+
+
+.notification-time {
+    white-space: nowrap;
+
+    color:
+        var(--notification-muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.notification-message {
+    margin-top: 0.75rem;
+
+    margin-bottom: 0.75rem;
+
+    color:
+        var(--notification-muted);
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ACTION
+   ========================================================= */
+
+.notification-action {
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color:
+        var(--notification-primary);
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.notification-action:hover {
+    color:
+        var(--notification-primary-hover);
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.empty-notifications {
+    padding: 4rem 1rem;
+
+    text-align: center;
+
+    color:
+        var(--notification-muted);
+}
+
+
+.empty-icon {
+    margin-bottom: 1rem;
+
+    font-size: 3rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .notification-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .notification-header .btn {
+        width: 100%;
+    }
+
+    .notification-top {
+        flex-direction: column;
+
+        gap: 0.4rem;
+    }
+
+    .notification-time {
+        white-space: normal;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .notification-title {
+        font-size: 1.6rem;
+    }
+
+    .notification-summary {
+        padding: 1rem;
+    }
+
+    .notification-card {
+        padding: 1rem;
+    }
+}
