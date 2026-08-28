@@ -1,0 +1,152 @@
+/* =========================================
+   ORDERS PAGE
+   ========================================= */
+
+.order-count {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   ORDER CARD
+   ========================================= */
+
+.order-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.order-card:last-child {
+    margin-bottom: 0;
+}
+
+.order-card:hover {
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   ORDER HEADER
+   ========================================= */
+
+.order-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.order-card-header h5 {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #212529;
+}
+
+.order-card-header small {
+    color: #6c757d;
+}
+
+
+/* =========================================
+   ORDER STATUS
+   ========================================= */
+
+.order-status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.order-status.completed {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.order-status.pending {
+    background-color: #fff3cd;
+    color: #664d03;
+}
+
+
+/* =========================================
+   ORDER INFORMATION
+   ========================================= */
+
+.order-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px 0;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.order-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.order-info-item span {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.order-info-item strong {
+    color: #212529;
+    font-size: 0.95rem;
+}
+
+
+/* =========================================
+   ORDER FOOTER
+   ========================================= */
+
+.order-card-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
+
+.order-card-footer .btn {
+    min-width: 150px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 576px) {
+
+    .order-card-header {
+        flex-direction: column;
+    }
+
+    .order-status {
+        align-self: flex-start;
+    }
+
+    .order-info {
+        grid-template-columns: 1fr;
+    }
+
+    .order-card-footer {
+        justify-content: stretch;
+    }
+
+    .order-card-footer .btn {
+        width: 100%;
+    }
+
+}

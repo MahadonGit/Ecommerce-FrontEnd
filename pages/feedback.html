@@ -8,221 +8,469 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>My Feedback - Ecommerce Store</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>My Feedback - ECommerce</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Feedback CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/feedback.css">
 
 </head>
 
 <body>
 
-    <!-- Page Header -->
+    <!-- =========================
+         NAVBAR
+         ========================= -->
 
-    <header>
+    <nav class="navbar navbar-expand-lg feedback-navbar">
 
-        <h1>My Feedback</h1>
+        <div class="container">
 
-        <nav>
+            <a
+                class="navbar-brand"
+                href="../index.html">
 
-            <a href="products.html">
-                Products
+                ECommerce
+
             </a>
 
-            <a href="orders.html">
-                My Orders
-            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#feedbackNavbar"
+                aria-controls="feedbackNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
 
-            <a href="profile.html">
-                My Profile
-            </a>
+                <span class="navbar-toggler-icon"></span>
 
-        </nav>
+            </button>
 
-    </header>
+            <div
+                class="collapse navbar-collapse"
+                id="feedbackNavbar">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="products.html">
+
+                            Products
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="cart.html">
+
+                            Cart
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="orders.html">
+
+                            Orders
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="notifications.html">
+
+                            Notifications
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+                <a
+                    href="profile.html"
+                    class="btn btn-primary">
+
+                    My Account
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
 
 
-    <!-- Main Content -->
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
 
     <main>
 
-        <!-- Submit Feedback -->
+        <div class="container py-5">
 
-        <section>
+            <!-- Page Header -->
 
-            <h2>Leave Feedback</h2>
-
-            <form>
-
-                <!-- Product -->
+            <div class="feedback-header mb-4">
 
                 <div>
 
-                    <label for="product">
-                        Product
-                    </label>
+                    <h1>
+                        My Feedback
+                    </h1>
 
-                    <select id="product"
-                            name="product">
+                    <p>
+                        Share your experience with the products you purchased.
+                    </p>
 
-                        <option value="">
-                            Select Product
-                        </option>
+                </div>
 
-                        <option value="1">
-                            Gaming Laptop
-                        </option>
+                <a
+                    href="products.html"
+                    class="btn btn-outline-primary">
 
-                        <option value="2">
-                            Wireless Mouse
-                        </option>
+                    Browse Products
 
-                    </select>
+                </a>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- =========================
+                     SUBMIT FEEDBACK
+                     ========================= -->
+
+                <div class="col-lg-5">
+
+                    <div class="feedback-card">
+
+                        <div class="card-header-content">
+
+                            <h3>
+                                Leave Feedback
+                            </h3>
+
+                            <p>
+                                Tell us what you think about your product.
+                            </p>
+
+                        </div>
+
+                        <hr>
+
+
+                        <form>
+
+
+                            <!-- Product -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="product"
+                                    class="form-label">
+
+                                    Product
+
+                                </label>
+
+                                <select
+                                    id="product"
+                                    name="product"
+                                    class="form-select">
+
+                                    <option value="">
+                                        Select Product
+                                    </option>
+
+                                    <option value="1">
+                                        Gaming Laptop
+                                    </option>
+
+                                    <option value="2">
+                                        Wireless Mouse
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- Rating -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="rating"
+                                    class="form-label">
+
+                                    Rating
+
+                                </label>
+
+                                <select
+                                    id="rating"
+                                    name="rating"
+                                    class="form-select">
+
+                                    <option value="">
+                                        Select Rating
+                                    </option>
+
+                                    <option value="5">
+                                        5 - Excellent
+                                    </option>
+
+                                    <option value="4">
+                                        4 - Very Good
+                                    </option>
+
+                                    <option value="3">
+                                        3 - Good
+                                    </option>
+
+                                    <option value="2">
+                                        2 - Poor
+                                    </option>
+
+                                    <option value="1">
+                                        1 - Very Poor
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- Comment -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="comment"
+                                    class="form-label">
+
+                                    Your Feedback
+
+                                </label>
+
+                                <textarea
+                                    id="comment"
+                                    name="comment"
+                                    class="form-control"
+                                    rows="5"
+                                    placeholder="Write your feedback here..."></textarea>
+
+                            </div>
+
+
+                            <!-- Submit -->
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary submit-feedback-btn">
+
+                                Submit Feedback
+
+                            </button>
+
+                        </form>
+
+                    </div>
 
                 </div>
 
 
-                <!-- Rating -->
+                <!-- =========================
+                     PREVIOUS FEEDBACK
+                     ========================= -->
 
-                <div>
+                <div class="col-lg-7">
 
-                    <label for="rating">
-                        Rating
-                    </label>
+                    <div class="feedback-card">
 
-                    <select id="rating"
-                            name="rating">
+                        <div class="card-header-content">
 
-                        <option value="">
-                            Select Rating
-                        </option>
+                            <h3>
+                                My Previous Feedback
+                            </h3>
 
-                        <option value="5">
-                            5 - Excellent
-                        </option>
+                            <p>
+                                Your previously submitted product reviews.
+                            </p>
 
-                        <option value="4">
-                            4 - Very Good
-                        </option>
+                        </div>
 
-                        <option value="3">
-                            3 - Good
-                        </option>
+                        <hr>
 
-                        <option value="2">
-                            2 - Poor
-                        </option>
 
-                        <option value="1">
-                            1 - Very Poor
-                        </option>
+                        <!-- Feedback 1 -->
 
-                    </select>
+                        <article class="feedback-item">
+
+                            <div class="feedback-item-header">
+
+                                <div>
+
+                                    <h4>
+                                        Gaming Laptop
+                                    </h4>
+
+                                    <div class="rating">
+                                        ★★★★★
+                                    </div>
+
+                                </div>
+
+                                <span class="feedback-date">
+                                    August 25, 2026
+                                </span>
+
+                            </div>
+
+                            <p class="feedback-comment">
+
+                                Excellent product. Very good performance.
+
+                            </p>
+
+                            <div class="feedback-actions">
+
+                                <button
+                                    type="button"
+                                    class="btn btn-sm btn-outline-primary">
+
+                                    Edit
+
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="btn btn-sm btn-outline-danger">
+
+                                    Delete
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Feedback 2 -->
+
+                        <article class="feedback-item">
+
+                            <div class="feedback-item-header">
+
+                                <div>
+
+                                    <h4>
+                                        Wireless Mouse
+                                    </h4>
+
+                                    <div class="rating">
+                                        ★★★★☆
+                                    </div>
+
+                                </div>
+
+                                <span class="feedback-date">
+                                    August 20, 2026
+                                </span>
+
+                            </div>
+
+                            <p class="feedback-comment">
+
+                                Good quality and comfortable to use.
+
+                            </p>
+
+                            <div class="feedback-actions">
+
+                                <button
+                                    type="button"
+                                    class="btn btn-sm btn-outline-primary">
+
+                                    Edit
+
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="btn btn-sm btn-outline-danger">
+
+                                    Delete
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    </div>
 
                 </div>
 
+            </div>
 
-                <!-- Comment -->
-
-                <div>
-
-                    <label for="comment">
-                        Your Feedback
-                    </label>
-
-                    <textarea
-                        id="comment"
-                        name="comment"
-                        rows="5"
-                        placeholder="Write your feedback here...">
-                    </textarea>
-
-                </div>
-
-
-                <!-- Submit -->
-
-                <button type="submit">
-                    Submit Feedback
-                </button>
-
-            </form>
-
-        </section>
-
-
-        <!-- Existing Feedback -->
-
-        <section>
-
-            <h2>My Previous Feedback</h2>
-
-
-            <!-- Feedback 1 -->
-
-            <article>
-
-                <h3>Gaming Laptop</h3>
-
-                <p>
-                    <strong>Rating:</strong>
-                    5 / 5
-                </p>
-
-                <p>
-                    <strong>Comment:</strong>
-                    Excellent product. Very good performance.
-                </p>
-
-                <button type="button">
-                    Edit
-                </button>
-
-                <button type="button">
-                    Delete
-                </button>
-
-            </article>
-
-
-            <!-- Feedback 2 -->
-
-            <article>
-
-                <h3>Wireless Mouse</h3>
-
-                <p>
-                    <strong>Rating:</strong>
-                    4 / 5
-                </p>
-
-                <p>
-                    <strong>Comment:</strong>
-                    Good quality and comfortable to use.
-                </p>
-
-                <button type="button">
-                    Edit
-                </button>
-
-                <button type="button">
-                    Delete
-                </button>
-
-            </article>
-
-        </section>
+        </div>
 
     </main>
 
 
-    <!-- Footer -->
+    <!-- =========================
+         FOOTER
+         ========================= -->
 
-    <footer>
+    <footer class="feedback-footer">
 
-        <p>
-            &copy; 2026 Ecommerce Store
-        </p>
+        <div class="container">
+
+            <p class="mb-0 text-center">
+
+                © 2026 ECommerce Store.
+                All rights reserved.
+
+            </p>
+
+        </div>
 
     </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
 
 </body>
 

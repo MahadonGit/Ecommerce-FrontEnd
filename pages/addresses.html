@@ -1,215 +1,788 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
+```
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <title>My Addresses - Ecommerce Store</title>
-    <link rel="stylesheet" href="../css/style.css">
+<title>My Addresses - ECommerce</title>
+
+
+<!-- Bootstrap CSS -->
+
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+
+<!-- Shared Account CSS -->
+
+<link
+    rel="stylesheet"
+    href="../css/account.css">
+
+
+<!-- Address Page CSS -->
+
+<link
+    rel="stylesheet"
+    href="../css/address.css">
+```
 
 </head>
 
 <body>
 
+<!-- =========================================
+     NAVBAR
+     ========================================= -->
+
+<nav class="navbar navbar-expand-lg profile-navbar">
+
+```
+<div class="container">
+
+
+    <!-- Logo -->
+
+    <a
+        class="navbar-brand"
+        href="../index.html">
+
+        ECommerce
+
+    </a>
+
+
+    <!-- Mobile Navbar Button -->
+
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#profileNavbar"
+        aria-controls="profileNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+
+    <!-- Navbar Links -->
+
+    <div
+        class="collapse navbar-collapse"
+        id="profileNavbar">
+
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+            <!-- Products -->
+
+            <li class="nav-item">
+
+                <a
+                    class="nav-link"
+                    href="products.html">
+
+                    Products
+
+                </a>
+
+            </li>
+
+
+            <!-- Cart -->
+
+            <li class="nav-item">
+
+                <a
+                    class="nav-link"
+                    href="cart.html">
+
+                    Cart
+
+                </a>
+
+            </li>
+
+
+            <!-- Orders -->
+
+            <li class="nav-item">
+
+                <a
+                    class="nav-link"
+                    href="orders.html">
+
+                    Orders
+
+                </a>
+
+            </li>
+
+
+            <!-- Notifications -->
+
+            <li class="nav-item">
+
+                <a
+                    class="nav-link"
+                    href="notifications.html">
+
+                    Notifications
+
+                </a>
+
+            </li>
+
+        </ul>
+
+
+        <!-- Account Button -->
+
+        <div class="d-flex gap-2">
+
+            <a
+                href="profile.html"
+                class="btn btn-primary profile-nav-button">
+
+                My Account
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</nav>
+
+<!-- =========================================
+     MAIN CONTENT
+     ========================================= -->
+
+<main>
+
+```
+<div class="container py-5">
+
+
     <!-- Page Header -->
 
-    <header>
+    <div class="profile-page-header mb-4">
 
-        <h1>My Addresses</h1>
+        <div>
 
-        <nav>
+            <h1>
+                My Addresses
+            </h1>
 
-            <a href="products.html">
-                Products
-            </a>
+            <p>
+                Manage your saved delivery addresses.
+            </p>
 
-            <a href="profile.html">
-                My Profile
-            </a>
+        </div>
 
-        </nav>
-
-    </header>
+    </div>
 
 
-    <!-- Main Content -->
 
-    <main>
+    <div class="row g-4">
 
-        <!-- Saved Addresses -->
 
-        <section>
+        <!-- =================================
+             ACCOUNT SIDEBAR
+             ================================= -->
 
-            <h2>Saved Addresses</h2>
+        <div class="col-lg-4">
 
-            <article>
+            <div class="account-card profile-sidebar text-center">
 
-                <h3>Home Address</h3>
 
-                <p>
-                    123 Main Street
+                <!-- Avatar -->
+
+                <div class="profile-avatar">
+                    MA
+                </div>
+
+
+                <!-- Name -->
+
+                <h3 class="profile-name">
+                    Mahad Abrar
+                </h3>
+
+
+                <!-- Email -->
+
+                <p class="profile-email">
+                    mahad@example.com
                 </p>
 
-                <p>
-                    Gojra, Punjab, Pakistan
-                </p>
 
-                <p>
-                    Postal Code: 56000
-                </p>
+                <!-- Role -->
 
-                <button type="button">
-                    Edit
-                </button>
-
-                <button type="button">
-                    Delete
-                </button>
-
-            </article>
-
-        </section>
+                <span class="profile-role">
+                    Customer
+                </span>
 
 
-        <!-- Add New Address -->
+                <hr>
 
-        <section>
 
-            <h2>Add New Address</h2>
+                <!-- Account Navigation -->
 
-            <form>
+                <div class="profile-menu">
 
-                <!-- Address Line -->
 
-                <div>
+                    <!-- Profile -->
 
-                    <label for="addressLine">
-                        Address
-                    </label>
+                    <a href="profile.html">
 
-                    <input
-                        type="text"
-                        id="addressLine"
-                        name="addressLine"
-                        placeholder="Enter your complete address"
-                    >
+                        <span>👤</span>
+
+                        Profile
+
+                    </a>
+
+
+                    <!-- Addresses -->
+
+                    <a
+                        href="addresses.html"
+                        class="active">
+
+                        <span>📍</span>
+
+                        My Addresses
+
+                    </a>
+
+
+                    <!-- Orders -->
+
+                    <a href="orders.html">
+
+                        <span>📦</span>
+
+                        My Orders
+
+                    </a>
+
+
+                    <!-- Notifications -->
+
+                    <a href="notifications.html">
+
+                        <span>🔔</span>
+
+                        Notifications
+
+                    </a>
+
+
+                    <!-- Change Password -->
+
+                    <a href="change-password.html">
+
+                        <span>🔒</span>
+
+                        Change Password
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             ADDRESS CONTENT
+             ================================= -->
+
+        <div class="col-lg-8">
+
+
+            <!-- =================================
+                 SAVED ADDRESSES
+                 ================================= -->
+
+            <div class="account-card mb-4">
+
+
+                <!-- Section Header -->
+
+                <div class="profile-section-header">
+
+                    <div>
+
+                        <h4>
+                            Saved Addresses
+                        </h4>
+
+                        <p>
+                            Your saved delivery addresses.
+                        </p>
+
+                    </div>
+
+
+                    <span class="address-count">
+
+                        1 Address
+
+                    </span>
 
                 </div>
 
 
-                <!-- City -->
-
-                <div>
-
-                    <label for="city">
-                        City
-                    </label>
-
-                    <input
-                        type="text"
-                        id="city"
-                        name="city"
-                        placeholder="Enter your city"
-                    >
-
-                </div>
+                <hr>
 
 
-                <!-- State -->
+                <!-- Address Card -->
 
-                <div>
-
-                    <label for="state">
-                        State / Province
-                    </label>
-
-                    <input
-                        type="text"
-                        id="state"
-                        name="state"
-                        placeholder="Enter your state or province"
-                    >
-
-                </div>
+                <article class="address-card">
 
 
-                <!-- Postal Code -->
+                    <!-- Address Header -->
 
-                <div>
-
-                    <label for="postalCode">
-                        Postal Code
-                    </label>
-
-                    <input
-                        type="text"
-                        id="postalCode"
-                        name="postalCode"
-                        placeholder="Enter postal code"
-                    >
-
-                </div>
+                    <div class="address-card-header">
 
 
-                <!-- Country -->
+                        <div class="address-title">
 
-                <div>
 
-                    <label for="country">
-                        Country
-                    </label>
+                            <span class="address-icon">
+                                📍
+                            </span>
 
-                    <select
-                        id="country"
-                        name="country">
 
-                        <option value="">
-                            Select Country
-                        </option>
+                            <div>
 
-                        <option value="Pakistan">
+                                <h5>
+                                    Home Address
+                                </h5>
+
+                                <span class="address-type">
+                                    Home
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Default Badge -->
+
+                        <span class="address-badge">
+
+                            Default
+
+                        </span>
+
+                    </div>
+
+
+                    <!-- Address Details -->
+
+                    <div class="address-details">
+
+
+                        <p>
+                            <strong>
+                                123 Main Street
+                            </strong>
+                        </p>
+
+
+                        <p>
+                            Gojra, Punjab
+                        </p>
+
+
+                        <p>
                             Pakistan
-                        </option>
+                        </p>
 
-                        <option value="USA">
-                            United States
-                        </option>
 
-                        <option value="UK">
-                            United Kingdom
-                        </option>
+                        <p class="mb-0">
 
-                    </select>
+                            <strong>
+                                Postal Code:
+                            </strong>
+
+                            56000
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- Address Actions -->
+
+                    <div class="address-actions">
+
+
+                        <button
+                            type="button"
+                            class="btn btn-outline-primary">
+
+                            Edit
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-outline-danger">
+
+                            Delete
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+
+            <!-- =================================
+                 ADD NEW ADDRESS
+                 ================================= -->
+
+            <div class="account-card">
+
+
+                <!-- Section Header -->
+
+                <div class="profile-section-header">
+
+                    <div>
+
+                        <h4>
+                            Add New Address
+                        </h4>
+
+                        <p>
+                            Add a new delivery address to your account.
+                        </p>
+
+                    </div>
 
                 </div>
 
 
-                <!-- Save Button -->
-
-                <button type="submit">
-                    Save Address
-                </button>
-
-            </form>
-
-        </section>
-
-    </main>
+                <hr>
 
 
-    <!-- Footer -->
+                <!-- Address Form -->
 
-    <footer>
+                <form>
 
-        <p>
-            &copy; 2026 Ecommerce Store
+
+                    <!-- Address Line -->
+
+                    <div class="mb-4">
+
+                        <label
+                            for="addressLine"
+                            class="form-label">
+
+                            Address
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="addressLine"
+                            name="addressLine"
+                            class="form-control"
+                            placeholder="Enter your complete address"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- City + State -->
+
+                    <div class="row g-4">
+
+
+                        <!-- City -->
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="city"
+                                class="form-label">
+
+                                City
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="city"
+                                name="city"
+                                class="form-control"
+                                placeholder="Enter your city"
+                                required>
+
+                        </div>
+
+
+                        <!-- State -->
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="state"
+                                class="form-label">
+
+                                State / Province
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="state"
+                                name="state"
+                                class="form-control"
+                                placeholder="Enter your state or province"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Postal Code + Country -->
+
+                    <div class="row g-4 mt-1">
+
+
+                        <!-- Postal Code -->
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="postalCode"
+                                class="form-label">
+
+                                Postal Code
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="postalCode"
+                                name="postalCode"
+                                class="form-control"
+                                placeholder="Enter postal code"
+                                required>
+
+                        </div>
+
+
+                        <!-- Country -->
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="country"
+                                class="form-label">
+
+                                Country
+
+                            </label>
+
+
+                            <select
+                                id="country"
+                                name="country"
+                                class="form-select"
+                                required>
+
+
+                                <option value="">
+                                    Select Country
+                                </option>
+
+
+                                <option value="Pakistan">
+                                    Pakistan
+                                </option>
+
+
+                                <option value="USA">
+                                    United States
+                                </option>
+
+
+                                <option value="UK">
+                                    United Kingdom
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Address Type -->
+
+                    <div class="mt-4">
+
+                        <label
+                            for="addressType"
+                            class="form-label">
+
+                            Address Type
+
+                        </label>
+
+
+                        <select
+                            id="addressType"
+                            name="addressType"
+                            class="form-select">
+
+
+                            <option value="Home">
+                                Home
+                            </option>
+
+
+                            <option value="Office">
+                                Office
+                            </option>
+
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Default Address -->
+
+                    <div class="form-check mt-4">
+
+
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="isDefault"
+                            name="isDefault">
+
+
+                        <label
+                            class="form-check-label"
+                            for="isDefault">
+
+                            Make this my default address
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- Form Actions -->
+
+                    <div class="address-form-actions">
+
+
+                        <button
+                            type="reset"
+                            class="btn btn-outline-secondary">
+
+                            Cancel
+
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary">
+
+                            Save Address
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</main>
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
+
+<footer class="profile-footer">
+
+```
+<div class="container">
+
+    <div class="text-center">
+
+        <p class="mb-0">
+
+            © 2026 ECommerce Store.
+            All rights reserved.
+
         </p>
 
-    </footer>
+    </div>
+
+</div>
+```
+
+</footer>
+
+<!-- Bootstrap JavaScript -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
 
 </body>
 

@@ -2,131 +2,593 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Admin Dashboard - ECommerce</title>
+
+
+    <!-- Bootstrap CSS -->
 
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/admin.css">
+
+    <!-- Admin Dashboard CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/admin-dashboard.css">
+
 </head>
+
 
 <body>
 
-    <div class="container-fluid py-4">
 
-        <div class="admin-header">
-            <div>
-                <h1>Admin Dashboard</h1>
-                <p>Manage your ECommerce store.</p>
-            </div>
+<!-- =========================================
+     NAVBAR
+     ========================================= -->
 
-            <span class="admin-badge">
-                Administrator
-            </span>
+<nav class="navbar navbar-expand-lg admin-navbar">
+
+    <div class="container-fluid px-4">
+
+
+        <!-- Brand -->
+
+        <a
+            class="navbar-brand"
+            href="admin-dashboard.html">
+
+            ECommerce Admin
+
+        </a>
+
+
+        <!-- Mobile Button -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#adminNavbar"
+            aria-controls="adminNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- Navigation -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="adminNavbar">
+
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                <!-- Dashboard -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="admin-dashboard.html">
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+
+                <!-- Products -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="admin-products.html">
+
+                        Products
+
+                    </a>
+
+                </li>
+
+
+                <!-- Categories -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="admin-categories.html">
+
+                        Categories
+
+                    </a>
+
+                </li>
+
+
+                <!-- Orders -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="admin-orders.html">
+
+                        Orders
+
+                    </a>
+
+                </li>
+
+
+                <!-- Customers -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="admin-customers.html">
+
+                        Customers
+
+                    </a>
+
+                </li>
+
+
+                <!-- Payments -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="admin-payments.html">
+
+                        Payments
+
+                    </a>
+
+                </li>
+
+
+                <!-- Notifications -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="admin-notifications.html">
+
+                        Notifications
+
+                    </a>
+
+                </li>
+
+
+                <!-- Feedback -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="admin-feedback.html">
+
+                        Feedback
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <!-- Admin Profile -->
+
+            <a
+                href="admin-profile.html"
+                class="btn admin-profile-button">
+
+                Admin Profile
+
+            </a>
+
         </div>
 
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================
+     MAIN CONTENT
+     ========================================= -->
+
+<main>
+
+    <div class="container-fluid px-4 py-5">
+
+
+        <!-- =================================
+             PAGE HEADER
+             ================================= -->
+
+        <div class="dashboard-header mb-4">
+
+            <div>
+
+                <span class="dashboard-label">
+                    ADMIN PANEL
+                </span>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Welcome back, Admin. Here's what's happening
+                    with your store.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             STATISTICS
+             ================================= -->
 
         <div class="row g-4 mb-4">
 
-            <div class="col-sm-6 col-xl-3">
-                <div class="admin-stat-card">
-                    <span>Total Customers</span>
-                    <strong>1,248</strong>
-                    <small>+12% this month</small>
+
+            <!-- Total Products -->
+
+            <div class="col-12 col-sm-6 col-xl-3">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📦
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Total Products
+                        </span>
+
+                        <strong>
+                            128
+                        </strong>
+
+                        <small>
+                            Products in store
+                        </small>
+
+                    </div>
+
                 </div>
+
             </div>
 
-            <div class="col-sm-6 col-xl-3">
-                <div class="admin-stat-card">
-                    <span>Total Products</span>
-                    <strong>356</strong>
-                    <small>24 recently added</small>
+
+            <!-- Total Customers -->
+
+            <div class="col-12 col-sm-6 col-xl-3">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Total Customers
+                        </span>
+
+                        <strong>
+                            1,245
+                        </strong>
+
+                        <small>
+                            Registered customers
+                        </small>
+
+                    </div>
+
                 </div>
+
             </div>
 
-            <div class="col-sm-6 col-xl-3">
-                <div class="admin-stat-card">
-                    <span>Total Orders</span>
-                    <strong>2,481</strong>
-                    <small>184 this month</small>
+
+            <!-- Total Orders -->
+
+            <div class="col-12 col-sm-6 col-xl-3">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        🛒
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Total Orders
+                        </span>
+
+                        <strong>
+                            856
+                        </strong>
+
+                        <small>
+                            Orders placed
+                        </small>
+
+                    </div>
+
                 </div>
+
             </div>
 
-            <div class="col-sm-6 col-xl-3">
-                <div class="admin-stat-card">
-                    <span>Revenue</span>
-                    <strong>$48,920</strong>
-                    <small>+18% this month</small>
+
+            <!-- Total Revenue -->
+
+            <div class="col-12 col-sm-6 col-xl-3">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        💰
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Total Revenue
+                        </span>
+
+                        <strong>
+                            Rs. 8.4M
+                        </strong>
+
+                        <small>
+                            Total sales revenue
+                        </small>
+
+                    </div>
+
                 </div>
+
             </div>
 
         </div>
 
 
+
+        <!-- =================================
+             MAIN DASHBOARD ROW
+             ================================= -->
+
         <div class="row g-4">
 
-            <div class="col-lg-8">
 
-                <div class="admin-card">
+            <!-- =================================
+                 RECENT ORDERS
+                 ================================= -->
 
-                    <div class="admin-card-header">
-                        <h4>Recent Orders</h4>
+            <div class="col-12 col-xl-8">
 
-                        <a href="admin-orders.html">
+                <div class="dashboard-card">
+
+
+                    <!-- Card Header -->
+
+                    <div class="dashboard-card-header">
+
+                        <div>
+
+                            <h2>
+                                Recent Orders
+                            </h2>
+
+                            <p>
+                                Latest orders from customers.
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="admin-orders.html"
+                            class="view-all">
+
                             View All
+
                         </a>
+
                     </div>
+
+
+                    <!-- Orders Table -->
 
                     <div class="table-responsive">
 
-                        <table class="table align-middle">
+                        <table class="table dashboard-table">
 
                             <thead>
+
                                 <tr>
-                                    <th>Order</th>
-                                    <th>Customer</th>
-                                    <th>Total</th>
-                                    <th>Status</th>
+
+                                    <th>
+                                        Order
+                                    </th>
+
+                                    <th>
+                                        Customer
+                                    </th>
+
+                                    <th>
+                                        Amount
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Date
+                                    </th>
+
                                 </tr>
+
                             </thead>
+
 
                             <tbody>
 
+
+                                <!-- Order 1 -->
+
                                 <tr>
-                                    <td>#1045</td>
-                                    <td>Mahad Abrar</td>
-                                    <td>$150.00</td>
+
                                     <td>
+                                        #1001
+                                    </td>
+
+                                    <td>
+                                        Mahad Abrar
+                                    </td>
+
+                                    <td>
+                                        Rs. 140,400
+                                    </td>
+
+                                    <td>
+
                                         <span class="status completed">
                                             Completed
                                         </span>
+
                                     </td>
+
+                                    <td>
+                                        Aug 25, 2026
+                                    </td>
+
                                 </tr>
 
+
+                                <!-- Order 2 -->
+
                                 <tr>
-                                    <td>#1044</td>
-                                    <td>Ahmed</td>
-                                    <td>$89.99</td>
+
                                     <td>
+                                        #1002
+                                    </td>
+
+                                    <td>
+                                        Ali Khan
+                                    </td>
+
+                                    <td>
+                                        Rs. 45,000
+                                    </td>
+
+                                    <td>
+
                                         <span class="status pending">
                                             Pending
                                         </span>
+
                                     </td>
+
+                                    <td>
+                                        Aug 24, 2026
+                                    </td>
+
                                 </tr>
 
+
+                                <!-- Order 3 -->
+
                                 <tr>
-                                    <td>#1043</td>
-                                    <td>Ali</td>
-                                    <td>$210.50</td>
+
                                     <td>
+                                        #1003
+                                    </td>
+
+                                    <td>
+                                        Ahmed Raza
+                                    </td>
+
+                                    <td>
+                                        Rs. 78,500
+                                    </td>
+
+                                    <td>
+
                                         <span class="status processing">
                                             Processing
                                         </span>
+
                                     </td>
+
+                                    <td>
+                                        Aug 23, 2026
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- Order 4 -->
+
+                                <tr>
+
+                                    <td>
+                                        #1004
+                                    </td>
+
+                                    <td>
+                                        Sara Ahmed
+                                    </td>
+
+                                    <td>
+                                        Rs. 32,000
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status cancelled">
+                                            Cancelled
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        Aug 22, 2026
+                                    </td>
+
                                 </tr>
 
                             </tbody>
@@ -140,38 +602,133 @@
             </div>
 
 
-            <div class="col-lg-4">
 
-                <div class="admin-card">
+            <!-- =================================
+                 QUICK ACTIONS
+                 ================================= -->
 
-                    <div class="admin-card-header">
-                        <h4>Quick Actions</h4>
+            <div class="col-12 col-xl-4">
+
+                <div class="dashboard-card quick-actions-card">
+
+
+                    <div class="dashboard-card-header">
+
+                        <div>
+
+                            <h2>
+                                Quick Actions
+                            </h2>
+
+                            <p>
+                                Common admin tasks.
+                            </p>
+
+                        </div>
+
                     </div>
+
 
                     <div class="quick-actions">
 
-                        <a href="admin-products.html">
-                            Add / Manage Products
+
+                        <!-- Add Product -->
+
+                        <a
+                            href="admin-add-product.html"
+                            class="quick-action">
+
+                            <div class="quick-action-icon">
+                                ➕
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Add Product
+                                </strong>
+
+                                <span>
+                                    Create a new product
+                                </span>
+
+                            </div>
+
                         </a>
 
-                        <a href="admin-categories.html">
-                            Manage Categories
+
+                        <!-- Manage Orders -->
+
+                        <a
+                            href="admin-orders.html"
+                            class="quick-action">
+
+                            <div class="quick-action-icon">
+                                🛒
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Manage Orders
+                                </strong>
+
+                                <span>
+                                    View and update orders
+                                </span>
+
+                            </div>
+
                         </a>
 
-                        <a href="admin-users.html">
-                            Manage Users
+
+                        <!-- Manage Customers -->
+
+                        <a
+                            href="admin-customers.html"
+                            class="quick-action">
+
+                            <div class="quick-action-icon">
+                                👥
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Manage Customers
+                                </strong>
+
+                                <span>
+                                    View registered customers
+                                </span>
+
+                            </div>
+
                         </a>
 
-                        <a href="admin-orders.html">
-                            Manage Orders
-                        </a>
 
-                        <a href="admin-payments.html">
-                            Manage Payments
-                        </a>
+                        <!-- Payments -->
 
-                        <a href="admin-notifications.html">
-                            Send Notification
+                        <a
+                            href="admin-payments.html"
+                            class="quick-action">
+
+                            <div class="quick-action-icon">
+                                💳
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Manage Payments
+                                </strong>
+
+                                <span>
+                                    View payment records
+                                </span>
+
+                            </div>
+
                         </a>
 
                     </div>
@@ -182,7 +739,266 @@
 
         </div>
 
+
+
+        <!-- =================================
+             SECOND ROW
+             ================================= -->
+
+        <div class="row g-4 mt-1">
+
+
+            <!-- Recent Customers -->
+
+            <div class="col-12 col-lg-6">
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-header">
+
+                        <div>
+
+                            <h2>
+                                Recent Customers
+                            </h2>
+
+                            <p>
+                                Recently registered users.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="admin-customers.html"
+                            class="view-all">
+
+                            View All
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="customer-list">
+
+
+                        <!-- Customer 1 -->
+
+                        <div class="customer-item">
+
+                            <div class="customer-avatar">
+                                MA
+                            </div>
+
+                            <div class="customer-info">
+
+                                <strong>
+                                    Mahad Abrar
+                                </strong>
+
+                                <span>
+                                    mahad@example.com
+                                </span>
+
+                            </div>
+
+                            <small>
+                                Today
+                            </small>
+
+                        </div>
+
+
+                        <!-- Customer 2 -->
+
+                        <div class="customer-item">
+
+                            <div class="customer-avatar">
+                                AK
+                            </div>
+
+                            <div class="customer-info">
+
+                                <strong>
+                                    Ali Khan
+                                </strong>
+
+                                <span>
+                                    ali@example.com
+                                </span>
+
+                            </div>
+
+                            <small>
+                                Yesterday
+                            </small>
+
+                        </div>
+
+
+                        <!-- Customer 3 -->
+
+                        <div class="customer-item">
+
+                            <div class="customer-avatar">
+                                AR
+                            </div>
+
+                            <div class="customer-info">
+
+                                <strong>
+                                    Ahmed Raza
+                                </strong>
+
+                                <span>
+                                    ahmed@example.com
+                                </span>
+
+                            </div>
+
+                            <small>
+                                2 days ago
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Store Overview -->
+
+            <div class="col-12 col-lg-6">
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-header">
+
+                        <div>
+
+                            <h2>
+                                Store Overview
+                            </h2>
+
+                            <p>
+                                Current store information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="overview-list">
+
+
+                        <div class="overview-item">
+
+                            <span>
+                                Pending Orders
+                            </span>
+
+                            <strong>
+                                24
+                            </strong>
+
+                        </div>
+
+
+                        <div class="overview-item">
+
+                            <span>
+                                Processing Orders
+                            </span>
+
+                            <strong>
+                                18
+                            </strong>
+
+                        </div>
+
+
+                        <div class="overview-item">
+
+                            <span>
+                                Completed Orders
+                            </span>
+
+                            <strong>
+                                782
+                            </strong>
+
+                        </div>
+
+
+                        <div class="overview-item">
+
+                            <span>
+                                Low Stock Products
+                            </span>
+
+                            <strong>
+                                7
+                            </strong>
+
+                        </div>
+
+
+                        <div class="overview-item">
+
+                            <span>
+                                Unread Feedback
+                            </span>
+
+                            <strong>
+                                12
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
+
+<footer class="admin-footer">
+
+    <div class="container-fluid px-4">
+
+        <p>
+            © 2026 ECommerce Store. Admin Panel.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JavaScript -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
 
 </body>
 

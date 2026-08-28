@@ -1,0 +1,1405 @@
+/* =========================================================
+   ECOMMERCE - CHECKOUT PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   ROOT VARIABLES
+   ========================================================= */
+
+:root {
+
+    --checkout-primary: #5b5ff0;
+    --checkout-primary-dark: #474bd8;
+    --checkout-secondary: #7c3aed;
+
+    --checkout-background: #f5f7fc;
+    --checkout-surface: #ffffff;
+    --checkout-surface-soft: #f8f9ff;
+
+    --checkout-text: #172033;
+    --checkout-text-secondary: #4b5563;
+    --checkout-muted: #7b8494;
+
+    --checkout-border: #e7eaf2;
+
+    --checkout-success: #16834b;
+
+    --checkout-gradient: linear-gradient(
+        135deg,
+        var(--checkout-primary),
+        var(--checkout-secondary)
+    );
+
+    --checkout-shadow:
+        0 12px 35px rgba(31, 41, 55, 0.07);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    color: var(--checkout-text);
+
+    background:
+        radial-gradient(
+            circle at 0% 0%,
+            rgba(91, 95, 240, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 100% 20%,
+            rgba(124, 58, 237, 0.08),
+            transparent 28%
+        ),
+        var(--checkout-background);
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.checkout-navbar {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    border-bottom:
+        1px solid var(--checkout-border);
+
+    box-shadow:
+        0 4px 20px rgba(31, 41, 55, 0.04);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* =========================================================
+   NAVBAR BRAND
+   ========================================================= */
+
+.checkout-navbar .navbar-brand {
+
+    color:
+        var(--checkout-text);
+
+    font-size:
+        1.45rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -0.6px;
+
+    text-decoration:
+        none;
+}
+
+
+.checkout-navbar .navbar-brand:hover {
+
+    color:
+        var(--checkout-primary);
+}
+
+
+/* =========================================================
+   NAVBAR LINKS
+   ========================================================= */
+
+.checkout-navbar .nav-link {
+
+    margin:
+        0 0.15rem;
+
+    padding:
+        0.6rem 0.85rem !important;
+
+    color:
+        var(--checkout-text-secondary);
+
+    font-size:
+        0.9rem;
+
+    font-weight:
+        500;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.checkout-navbar .nav-link:hover {
+
+    color:
+        var(--checkout-primary);
+}
+
+
+/* =========================================================
+   ACCOUNT BUTTON
+   ========================================================= */
+
+.account-button {
+
+    padding:
+        0.6rem 1rem;
+
+    border:
+        none;
+
+    border-radius:
+        9px;
+
+    background:
+        var(--checkout-gradient);
+
+    color:
+        #ffffff;
+
+    font-size:
+        0.88rem;
+
+    font-weight:
+        600;
+
+    box-shadow:
+        0 6px 16px rgba(91, 95, 240, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.account-button:hover {
+
+    background:
+        var(--checkout-primary-dark);
+
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 9px 20px rgba(91, 95, 240, 0.24);
+}
+
+
+/* =========================================================
+   CHECKOUT HEADER
+   ========================================================= */
+
+.checkout-header {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        1rem;
+}
+
+
+.checkout-header h1 {
+
+    margin:
+        0;
+
+    color:
+        var(--checkout-text);
+
+    font-size:
+        2.2rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -0.8px;
+}
+
+
+.checkout-header p {
+
+    margin:
+        0.5rem 0 0;
+
+    color:
+        var(--checkout-muted);
+
+    font-size:
+        0.95rem;
+
+    line-height:
+        1.6;
+}
+
+
+.checkout-header .btn {
+
+    border-radius:
+        10px;
+
+    font-weight:
+        600;
+}
+
+
+/* =========================================================
+   CHECKOUT CARD
+   ========================================================= */
+
+.checkout-card {
+
+    position:
+        relative;
+
+    padding:
+        1.6rem;
+
+    overflow:
+        hidden;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border:
+        1px solid var(--checkout-border);
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        var(--checkout-shadow);
+}
+
+
+/* Decorative line */
+
+.checkout-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    height:
+        3px;
+
+    background:
+        var(--checkout-gradient);
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.section-heading {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        0.9rem;
+}
+
+
+.section-number {
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    flex:
+        0 0 auto;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        11px;
+
+    background:
+        rgba(91, 95, 240, 0.10);
+
+    color:
+        var(--checkout-primary);
+
+    font-size:
+        0.95rem;
+
+    font-weight:
+        800;
+}
+
+
+.section-heading h3 {
+
+    margin:
+        0;
+
+    color:
+        var(--checkout-text);
+
+    font-size:
+        1.25rem;
+
+    font-weight:
+        750;
+}
+
+
+.section-heading p {
+
+    margin:
+        0.3rem 0 0;
+
+    color:
+        var(--checkout-muted);
+
+    font-size:
+        0.84rem;
+
+    line-height:
+        1.5;
+}
+
+
+/* =========================================================
+   HORIZONTAL LINE
+   ========================================================= */
+
+.checkout-card hr {
+
+    margin:
+        1.35rem 0;
+
+    border:
+        0;
+
+    border-top:
+        1px solid var(--checkout-border);
+
+    opacity:
+        1;
+}
+
+
+/* =========================================================
+   ADDRESS OPTION
+   ========================================================= */
+
+.address-option {
+
+    display:
+        flex;
+
+    gap:
+        0.8rem;
+
+    margin-bottom:
+        0.9rem;
+
+    padding:
+        1rem;
+
+    border:
+        1px solid var(--checkout-border);
+
+    border-radius:
+        12px;
+
+    background:
+        #ffffff;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+.address-option:hover {
+
+    border-color:
+        rgba(91, 95, 240, 0.35);
+
+    background:
+        #fbfbff;
+}
+
+
+.address-option.selected {
+
+    border-color:
+        rgba(91, 95, 240, 0.55);
+
+    background:
+        rgba(91, 95, 240, 0.04);
+}
+
+
+.address-radio {
+
+    padding-top:
+        0.15rem;
+}
+
+
+.address-radio input {
+
+    width:
+        17px;
+
+    height:
+        17px;
+
+    accent-color:
+        var(--checkout-primary);
+}
+
+
+.address-content {
+
+    flex:
+        1;
+
+    cursor:
+        pointer;
+}
+
+
+.address-top {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        0.6rem;
+
+    margin-bottom:
+        0.45rem;
+}
+
+
+.address-top strong {
+
+    color:
+        var(--checkout-text);
+
+    font-size:
+        0.92rem;
+}
+
+
+.address-badge {
+
+    padding:
+        0.2rem 0.55rem;
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(22, 131, 75, 0.10);
+
+    color:
+        var(--checkout-success);
+
+    font-size:
+        0.68rem;
+
+    font-weight:
+        700;
+}
+
+
+.address-content p {
+
+    margin:
+        0.15rem 0;
+
+    color:
+        var(--checkout-muted);
+
+    font-size:
+        0.8rem;
+
+    line-height:
+        1.45;
+}
+
+
+/* =========================================================
+   ADD ADDRESS
+   ========================================================= */
+
+.add-address {
+
+    display:
+        inline-block;
+
+    margin-top:
+        0.3rem;
+
+    color:
+        var(--checkout-primary);
+
+    font-size:
+        0.85rem;
+
+    font-weight:
+        650;
+
+    text-decoration:
+        none;
+}
+
+
+.add-address:hover {
+
+    color:
+        var(--checkout-primary-dark);
+
+    text-decoration:
+        underline;
+}
+
+
+/* =========================================================
+   CHECKOUT PRODUCT
+   ========================================================= */
+
+.checkout-product {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        1rem;
+
+    padding:
+        1rem 0;
+
+    border-bottom:
+        1px solid var(--checkout-border);
+}
+
+
+.checkout-product:last-child {
+
+    border-bottom:
+        none;
+
+    padding-bottom:
+        0;
+}
+
+
+.checkout-product:first-of-type {
+
+    padding-top:
+        0;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+   ========================================================= */
+
+.product-image {
+
+    width:
+        62px;
+
+    height:
+        62px;
+
+    flex:
+        0 0 auto;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(91, 95, 240, 0.08);
+
+    font-size:
+        1.7rem;
+}
+
+
+/* =========================================================
+   PRODUCT DETAILS
+   ========================================================= */
+
+.product-details {
+
+    flex:
+        1;
+}
+
+
+.product-details h4 {
+
+    margin:
+        0 0 0.35rem;
+
+    color:
+        var(--checkout-text);
+
+    font-size:
+        0.98rem;
+
+    font-weight:
+        700;
+}
+
+
+.product-details p {
+
+    margin:
+        0.15rem 0;
+
+    color:
+        var(--checkout-muted);
+
+    font-size:
+        0.78rem;
+}
+
+
+/* =========================================================
+   PRODUCT PRICE
+   ========================================================= */
+
+.product-price {
+
+    color:
+        var(--checkout-text);
+
+    font-size:
+        0.92rem;
+
+    font-weight:
+        700;
+
+    white-space:
+        nowrap;
+}
+
+
+/* =========================================================
+   PAYMENT OPTION
+   ========================================================= */
+
+.payment-option {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        0.85rem;
+
+    margin-bottom:
+        0.75rem;
+
+    padding:
+        0.95rem;
+
+    border:
+        1px solid var(--checkout-border);
+
+    border-radius:
+        12px;
+
+    background:
+        #ffffff;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+.payment-option:last-child {
+
+    margin-bottom:
+        0;
+}
+
+
+.payment-option:hover {
+
+    border-color:
+        rgba(91, 95, 240, 0.35);
+
+    background:
+        #fbfbff;
+}
+
+
+.payment-option.selected {
+
+    border-color:
+        rgba(91, 95, 240, 0.55);
+
+    background:
+        rgba(91, 95, 240, 0.04);
+}
+
+
+.payment-option input {
+
+    width:
+        17px;
+
+    height:
+        17px;
+
+    flex:
+        0 0 auto;
+
+    accent-color:
+        var(--checkout-primary);
+}
+
+
+.payment-content {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        0.8rem;
+
+    flex:
+        1;
+
+    cursor:
+        pointer;
+}
+
+
+.payment-icon {
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    flex:
+        0 0 auto;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(91, 95, 240, 0.08);
+
+    font-size:
+        1.15rem;
+}
+
+
+.payment-content strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        0.2rem;
+
+    color:
+        var(--checkout-text);
+
+    font-size:
+        0.88rem;
+}
+
+
+.payment-content span {
+
+    display:
+        block;
+
+    color:
+        var(--checkout-muted);
+
+    font-size:
+        0.75rem;
+
+    line-height:
+        1.4;
+}
+
+
+/* =========================================================
+   SUMMARY CARD
+   ========================================================= */
+
+.summary-card {
+
+    position:
+        sticky;
+
+    top:
+        100px;
+
+    height:
+        auto;
+}
+
+
+/* =========================================================
+   SUMMARY HEADING
+   ========================================================= */
+
+.summary-heading {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        1rem;
+}
+
+
+.summary-heading h3 {
+
+    margin:
+        0;
+
+    color:
+        var(--checkout-text);
+
+    font-size:
+        1.25rem;
+
+    font-weight:
+        750;
+}
+
+
+.summary-heading span {
+
+    color:
+        var(--checkout-muted);
+
+    font-size:
+        0.78rem;
+}
+
+
+/* =========================================================
+   SUMMARY ROW
+   ========================================================= */
+
+.summary-row {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        1rem;
+
+    margin-bottom:
+        0.85rem;
+
+    color:
+        var(--checkout-muted);
+
+    font-size:
+        0.86rem;
+}
+
+
+.summary-row strong {
+
+    color:
+        var(--checkout-text);
+
+    font-weight:
+        650;
+}
+
+
+.summary-row .discount {
+
+    color:
+        var(--checkout-success);
+}
+
+
+/* =========================================================
+   SUMMARY TOTAL
+   ========================================================= */
+
+.summary-total {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        1rem;
+
+    margin-bottom:
+        1.3rem;
+}
+
+
+.summary-total span {
+
+    color:
+        var(--checkout-text);
+
+    font-size:
+        0.95rem;
+
+    font-weight:
+        700;
+}
+
+
+.summary-total strong {
+
+    color:
+        var(--checkout-primary);
+
+    font-size:
+        1.2rem;
+
+    font-weight:
+        800;
+}
+
+
+/* =========================================================
+   PLACE ORDER BUTTON
+   ========================================================= */
+
+.place-order-btn {
+
+    width:
+        100%;
+
+    min-height:
+        50px;
+
+    border:
+        none;
+
+    border-radius:
+        10px;
+
+    background:
+        var(--checkout-gradient);
+
+    color:
+        #ffffff;
+
+    font-size:
+        0.92rem;
+
+    font-weight:
+        700;
+
+    box-shadow:
+        0 8px 20px rgba(91, 95, 240, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.place-order-btn:hover {
+
+    background:
+        var(--checkout-primary-dark);
+
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(91, 95, 240, 0.28);
+}
+
+
+/* =========================================================
+   SECURE TEXT
+   ========================================================= */
+
+.secure-text {
+
+    margin:
+        1rem 0;
+
+    text-align:
+        center;
+
+    color:
+        var(--checkout-muted);
+
+    font-size:
+        0.75rem;
+}
+
+
+/* =========================================================
+   RETURN TO CART
+   ========================================================= */
+
+.continue-cart {
+
+    display:
+        block;
+
+    text-align:
+        center;
+
+    color:
+        var(--checkout-primary);
+
+    font-size:
+        0.82rem;
+
+    font-weight:
+        650;
+
+    text-decoration:
+        none;
+}
+
+
+.continue-cart:hover {
+
+    color:
+        var(--checkout-primary-dark);
+
+    text-decoration:
+        underline;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.checkout-footer {
+
+    margin-top:
+        auto;
+
+    padding:
+        1.5rem 0;
+
+    border-top:
+        1px solid var(--checkout-border);
+
+    background:
+        rgba(255, 255, 255, 0.85);
+
+    color:
+        var(--checkout-muted);
+
+    font-size:
+        0.78rem;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .checkout-header h1 {
+
+        font-size:
+            2rem;
+    }
+
+
+    .summary-card {
+
+        position:
+            static;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .checkout-header {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+    }
+
+
+    .checkout-header .btn {
+
+        width:
+            100%;
+    }
+
+
+    .checkout-header h1 {
+
+        font-size:
+            1.8rem;
+    }
+
+
+    .checkout-card {
+
+        padding:
+            1.25rem;
+
+        border-radius:
+            15px;
+    }
+
+
+    .checkout-product {
+
+        align-items:
+            flex-start;
+    }
+
+
+    .product-image {
+
+        width:
+            52px;
+
+        height:
+            52px;
+    }
+
+
+    .product-price {
+
+        font-size:
+            0.82rem;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .checkout-header h1 {
+
+        font-size:
+            1.6rem;
+    }
+
+
+    .checkout-header p {
+
+        font-size:
+            0.86rem;
+    }
+
+
+    .section-heading h3 {
+
+        font-size:
+            1.1rem;
+    }
+
+
+    .section-heading p {
+
+        font-size:
+            0.78rem;
+    }
+
+
+    .address-option {
+
+        padding:
+            0.85rem;
+    }
+
+
+    .checkout-product {
+
+        gap:
+            0.7rem;
+    }
+
+
+    .product-details h4 {
+
+        font-size:
+            0.9rem;
+    }
+
+
+    .payment-option {
+
+        padding:
+            0.8rem;
+    }
+
+
+    .payment-icon {
+
+        width:
+            36px;
+
+        height:
+            36px;
+
+        font-size:
+            1rem;
+    }
+
+
+    .payment-content strong {
+
+        font-size:
+            0.82rem;
+    }
+
+
+    .payment-content span {
+
+        font-size:
+            0.7rem;
+    }
+}

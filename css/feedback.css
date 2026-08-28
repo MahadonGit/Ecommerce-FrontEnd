@@ -1,0 +1,692 @@
+/* =========================================================
+   ECOMMERCE - FEEDBACK PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   ROOT VARIABLES
+   ========================================================= */
+
+:root {
+    --feedback-primary: #5b5ff0;
+    --feedback-primary-dark: #474bd8;
+    --feedback-secondary: #7c3aed;
+
+    --feedback-background: #f5f7fc;
+    --feedback-surface: #ffffff;
+    --feedback-surface-soft: #f8f9ff;
+
+    --feedback-text: #172033;
+    --feedback-text-secondary: #4b5563;
+    --feedback-muted: #7b8494;
+
+    --feedback-border: #e7eaf2;
+
+    --feedback-gradient: linear-gradient(
+        135deg,
+        var(--feedback-primary),
+        var(--feedback-secondary)
+    );
+
+    --feedback-shadow: 0 12px 35px rgba(31, 41, 55, 0.07);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    color: var(--feedback-text);
+
+    background:
+        radial-gradient(
+            circle at 0% 0%,
+            rgba(91, 95, 240, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 100% 20%,
+            rgba(124, 58, 237, 0.08),
+            transparent 28%
+        ),
+        var(--feedback-background);
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.feedback-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border-bottom: 1px solid var(--feedback-border);
+
+    box-shadow:
+        0 4px 20px rgba(31, 41, 55, 0.04);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* =========================================================
+   NAVBAR BRAND
+   ========================================================= */
+
+.feedback-navbar .navbar-brand {
+    color: var(--feedback-text);
+
+    font-size: 1.45rem;
+    font-weight: 800;
+
+    letter-spacing: -0.6px;
+
+    text-decoration: none;
+}
+
+
+.feedback-navbar .navbar-brand:hover {
+    color: var(--feedback-primary);
+}
+
+
+/* =========================================================
+   NAVBAR LINKS
+   ========================================================= */
+
+.feedback-navbar .nav-link {
+    margin: 0 0.15rem;
+
+    padding: 0.6rem 0.85rem !important;
+
+    color: var(--feedback-text-secondary);
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+}
+
+
+.feedback-navbar .nav-link:hover {
+    color: var(--feedback-primary);
+}
+
+
+/* =========================================================
+   NAVBAR BUTTON
+   ========================================================= */
+
+.feedback-navbar .btn-primary {
+    padding: 0.6rem 1rem;
+
+    border: none;
+    border-radius: 9px;
+
+    background: var(--feedback-gradient);
+
+    color: #ffffff;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 6px 16px rgba(91, 95, 240, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.feedback-navbar .btn-primary:hover {
+    background: var(--feedback-primary-dark);
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 9px 20px rgba(91, 95, 240, 0.24);
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.feedback-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+}
+
+
+.feedback-header h1 {
+    margin: 0;
+
+    color: var(--feedback-text);
+
+    font-size: 2.2rem;
+
+    font-weight: 800;
+
+    letter-spacing: -0.8px;
+}
+
+
+.feedback-header p {
+    margin: 0.5rem 0 0;
+
+    color: var(--feedback-muted);
+
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   HEADER BUTTON
+   ========================================================= */
+
+.feedback-header .btn {
+    border-radius: 10px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FEEDBACK CARD
+   ========================================================= */
+
+.feedback-card {
+    position: relative;
+
+    height: 100%;
+
+    padding: 1.7rem;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border: 1px solid var(--feedback-border);
+
+    border-radius: 18px;
+
+    box-shadow: var(--feedback-shadow);
+}
+
+
+/* =========================================================
+   CARD DECORATIVE LINE
+   ========================================================= */
+
+.feedback-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background: var(--feedback-gradient);
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.card-header-content h3 {
+    margin: 0;
+
+    color: var(--feedback-text);
+
+    font-size: 1.3rem;
+
+    font-weight: 750;
+}
+
+
+.card-header-content p {
+    margin: 0.4rem 0 0;
+
+    color: var(--feedback-muted);
+
+    font-size: 0.87rem;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   HORIZONTAL LINE
+   ========================================================= */
+
+.feedback-card hr {
+    margin: 1.4rem 0;
+
+    border: 0;
+
+    border-top: 1px solid var(--feedback-border);
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   FORM LABEL
+   ========================================================= */
+
+.form-label {
+    margin-bottom: 0.5rem;
+
+    color: var(--feedback-text-secondary);
+
+    font-size: 0.85rem;
+
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   FORM SELECT
+   ========================================================= */
+
+.form-select {
+    min-height: 48px;
+
+    border: 1px solid var(--feedback-border);
+
+    border-radius: 10px;
+
+    color: var(--feedback-text);
+
+    background-color: #ffffff;
+
+    box-shadow: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.form-select:hover {
+    border-color: #cfd3e1;
+}
+
+
+.form-select:focus {
+    border-color: var(--feedback-primary);
+
+    box-shadow:
+        0 0 0 4px rgba(91, 95, 240, 0.10);
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.form-control {
+    border: 1px solid var(--feedback-border);
+
+    border-radius: 10px;
+
+    color: var(--feedback-text);
+
+    background-color: #ffffff;
+
+    box-shadow: none;
+
+    resize: vertical;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.form-control::placeholder {
+    color: #a3a9b5;
+}
+
+
+.form-control:hover {
+    border-color: #cfd3e1;
+}
+
+
+.form-control:focus {
+    border-color: var(--feedback-primary);
+
+    box-shadow:
+        0 0 0 4px rgba(91, 95, 240, 0.10);
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.submit-feedback-btn {
+    width: 100%;
+
+    min-height: 48px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: var(--feedback-gradient);
+
+    color: #ffffff;
+
+    font-weight: 650;
+
+    box-shadow:
+        0 7px 18px rgba(91, 95, 240, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.submit-feedback-btn:hover {
+    background: var(--feedback-primary-dark);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 11px 25px rgba(91, 95, 240, 0.25);
+}
+
+
+/* =========================================================
+   FEEDBACK ITEM
+   ========================================================= */
+
+.feedback-item {
+    padding: 1.2rem;
+
+    margin-bottom: 1rem;
+
+    background: var(--feedback-surface-soft);
+
+    border: 1px solid var(--feedback-border);
+
+    border-radius: 14px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.feedback-item:last-child {
+    margin-bottom: 0;
+}
+
+
+.feedback-item:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(31, 41, 55, 0.06);
+}
+
+
+/* =========================================================
+   FEEDBACK ITEM HEADER
+   ========================================================= */
+
+.feedback-item-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+}
+
+
+.feedback-item-header h4 {
+    margin: 0;
+
+    color: var(--feedback-text);
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   RATING
+   ========================================================= */
+
+.rating {
+    margin-top: 0.4rem;
+
+    color: #f59e0b;
+
+    font-size: 1rem;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+.feedback-date {
+    color: var(--feedback-muted);
+
+    font-size: 0.78rem;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   COMMENT
+   ========================================================= */
+
+.feedback-comment {
+    margin:
+        0.9rem 0;
+
+    color: var(--feedback-text-secondary);
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.feedback-actions {
+    display: flex;
+
+    gap: 0.5rem;
+}
+
+
+.feedback-actions .btn {
+    min-width: 70px;
+
+    border-radius: 8px;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.feedback-footer {
+    margin-top: auto;
+
+    padding: 1.5rem 0;
+
+    border-top: 1px solid var(--feedback-border);
+
+    background: rgba(255, 255, 255, 0.85);
+
+    color: var(--feedback-muted);
+
+    font-size: 0.78rem;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .feedback-header h1 {
+        font-size: 2rem;
+    }
+
+    .feedback-card {
+        padding: 1.5rem;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .feedback-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .feedback-header .btn {
+        width: 100%;
+    }
+
+
+    .feedback-header h1 {
+        font-size: 1.8rem;
+    }
+
+
+    .feedback-card {
+        padding: 1.25rem;
+
+        border-radius: 15px;
+    }
+
+
+    .feedback-item-header {
+        flex-direction: column;
+
+        gap: 0.5rem;
+    }
+
+
+    .feedback-date {
+        white-space: normal;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .feedback-header h1 {
+        font-size: 1.6rem;
+    }
+
+
+    .feedback-header p {
+        font-size: 0.86rem;
+    }
+
+
+    .feedback-card {
+        padding: 1rem;
+    }
+
+
+    .card-header-content h3 {
+        font-size: 1.15rem;
+    }
+
+
+    .feedback-item {
+        padding: 1rem;
+    }
+
+
+    .feedback-actions {
+        width: 100%;
+    }
+
+
+    .feedback-actions .btn {
+        flex: 1;
+    }
+}
