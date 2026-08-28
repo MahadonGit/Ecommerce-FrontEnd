@@ -1,119 +1,550 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
+```
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <title>My Profile - Ecommerce Store</title>
-    <link rel="stylesheet" href="../css/style.css">
+<title>My Profile - ECommerce</title>
+
+<!-- Bootstrap CSS -->
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+<!-- Custom CSS -->
+<link
+    rel="stylesheet"
+    href="../css/account.css">
+```
 
 </head>
 
 <body>
 
-    <!-- Page Header -->
+```
+<!-- =========================================
+     NAVBAR
+     ========================================= -->
 
-    <header>
+<nav class="navbar navbar-expand-lg profile-navbar">
 
-        <h1>My Profile</h1>
+    <div class="container">
 
-        <nav>
-
-            <a href="products.html">
-                Products
-            </a>
-
-            <a href="categories.html">
-                Categories
-            </a>
-
-        </nav>
-
-    </header>
+        <a
+            class="navbar-brand"
+            href="../index.html">
+            ECommerce
+        </a>
 
 
-    <!-- Main Content -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#profileNavbar"
+            aria-controls="profileNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
 
-    <main>
+            <span class="navbar-toggler-icon"></span>
 
-        <section>
+        </button>
 
-            <h2>Personal Information</h2>
 
-            <form>
+        <div
+            class="collapse navbar-collapse"
+            id="profileNavbar">
 
-                <div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                    <label for="name">
-                        Name
-                    </label>
+                <li class="nav-item">
 
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Enter your name"
-                    >
+                    <a
+                        class="nav-link"
+                        href="products.html">
+                        Products
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="cart.html">
+                        Cart
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="orders.html">
+                        Orders
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="notifications.html">
+                        Notifications
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <div class="d-flex gap-2">
+
+                <a
+                    href="profile.html"
+                    class="btn btn-primary profile-nav-button">
+                    My Account
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================
+     MAIN CONTENT
+     ========================================= -->
+
+<main>
+
+    <div class="container py-5">
+
+
+        <!-- Page Header -->
+
+        <div class="profile-page-header mb-4">
+
+            <div>
+
+                <h1>
+                    My Profile
+                </h1>
+
+                <p>
+                    Manage your personal information and account settings.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="row g-4">
+
+
+            <!-- =================================
+                 PROFILE SIDEBAR
+                 ================================= -->
+
+            <div class="col-lg-4">
+
+                <div class="account-card profile-sidebar text-center">
+
+
+                    <!-- Avatar -->
+
+                    <div class="profile-avatar">
+                        MA
+                    </div>
+
+
+                    <h3 class="profile-name">
+                        Mahad Abrar
+                    </h3>
+
+
+                    <p class="profile-email">
+                        mahad@example.com
+                    </p>
+
+
+                    <span class="profile-role">
+                        Customer
+                    </span>
+
+
+                    <hr>
+
+
+                    <!-- Profile Navigation -->
+
+                    <div class="profile-menu">
+
+                        <a
+                            href="profile.html"
+                            class="active">
+                            <span>👤</span>
+                            Profile
+                        </a>
+
+
+                        <a href="addresses.html">
+
+                            <span>📍</span>
+                            My Addresses
+
+                        </a>
+
+
+                        <a href="orders.html">
+
+                            <span>📦</span>
+                            My Orders
+
+                        </a>
+
+
+                        <a href="notifications.html">
+
+                            <span>🔔</span>
+                            Notifications
+
+                        </a>
+
+
+                        <a href="change-password.html">
+
+                            <span>🔒</span>
+                            Change Password
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PROFILE INFORMATION
+                 ================================= -->
+
+            <div class="col-lg-8">
+
+                <div class="account-card">
+
+                    <div class="profile-section-header">
+
+                        <div>
+
+                            <h4>
+                                Personal Information
+                            </h4>
+
+                            <p>
+                                Update your account information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <!-- Profile Form -->
+
+                    <form>
+
+
+                        <!-- First + Last Name -->
+
+                        <div class="row g-4">
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="firstName"
+                                    class="form-label">
+                                    First Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    name="firstName"
+                                    class="form-control"
+                                    placeholder="Enter your first name"
+                                    value="Mahad">
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="lastName"
+                                    class="form-label">
+                                    Last Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    name="lastName"
+                                    class="form-control"
+                                    placeholder="Enter your last name"
+                                    value="Abrar">
+
+                            </div>
+
+
+                            <!-- Email -->
+
+                            <div class="col-12">
+
+                                <label
+                                    for="email"
+                                    class="form-label">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    class="form-control"
+                                    placeholder="Enter your email"
+                                    value="mahad@example.com">
+
+                            </div>
+
+
+                            <!-- Phone -->
+
+                            <div class="col-12">
+
+                                <label
+                                    for="phone"
+                                    class="form-label">
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    class="form-control"
+                                    placeholder="Enter your phone number"
+                                    value="0300-1234567">
+
+                            </div>
+
+
+                            <!-- User ID -->
+
+                            <div class="col-12">
+
+                                <label
+                                    for="userId"
+                                    class="form-label">
+                                    User ID
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="userId"
+                                    name="userId"
+                                    class="form-control"
+                                    value="USER-001"
+                                    readonly>
+
+                            </div>
+
+
+                            <!-- Role -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    class="form-label">
+                                    Account Role
+                                </label>
+
+                                <div class="role-display">
+
+                                    <span class="profile-role">
+                                        Customer
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- Actions -->
+
+                        <div class="profile-actions mt-4 pt-4">
+
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary">
+
+                                Cancel
+
+                            </button>
+
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary">
+
+                                Save Changes
+
+                            </button>
+
+                        </div>
+
+                    </form>
 
                 </div>
 
 
-                <div>
+                <!-- Account Quick Links -->
 
-                    <label for="email">
-                        Email
-                    </label>
+                <div class="row g-3 mt-1">
 
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email"
-                    >
+
+                    <div class="col-md-4">
+
+                        <a
+                            href="addresses.html"
+                            class="quick-card">
+
+                            <span class="quick-card-icon">
+                                📍
+                            </span>
+
+                            <strong>
+                                Addresses
+                            </strong>
+
+                            <small>
+                                Manage delivery addresses
+                            </small>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <a
+                            href="orders.html"
+                            class="quick-card">
+
+                            <span class="quick-card-icon">
+                                📦
+                            </span>
+
+                            <strong>
+                                Orders
+                            </strong>
+
+                            <small>
+                                View your orders
+                            </small>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <a
+                            href="change-password.html"
+                            class="quick-card">
+
+                            <span class="quick-card-icon">
+                                🔒
+                            </span>
+
+                            <strong>
+                                Security
+                            </strong>
+
+                            <small>
+                                Change your password
+                            </small>
+
+                        </a>
+
+                    </div>
+
 
                 </div>
 
+            </div>
 
-                <div>
+        </div>
 
-                    <label for="phone">
-                        Phone
-                    </label>
+    </div>
 
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="Enter your phone number"
-                    >
-
-                </div>
+</main>
 
 
-                <button type="submit">
-                    Update Profile
-                </button>
 
-            </form>
+<!-- =========================================
+     FOOTER
+     ========================================= -->
 
-        </section>
+<footer class="profile-footer">
 
-    </main>
+    <div class="container">
+
+        <div class="text-center">
+
+            <p class="mb-0">
+                © 2026 ECommerce Store. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
 
 
-    <!-- Footer -->
-
-    <footer>
-
-        <p>
-            &copy; 2026 Ecommerce Store
-        </p>
-
-    </footer>
+<!-- Bootstrap JS Bundle -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+```
 
 </body>
 

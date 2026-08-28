@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout - ECommerce</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Checkout CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/checkout.css">
+        
+        <link rel="stylesheet" href="../css/payment.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+     ===================================================== -->
+
+<nav class="navbar navbar-expand-lg checkout-navbar">
+
+    <div class="container">
+
+
+        <!-- Brand -->
+
+        <a
+            class="navbar-brand"
+            href="../index.html">
+
+            ECommerce
+
+        </a>
+
+
+        <!-- Mobile Button -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#checkoutNavbar"
+            aria-controls="checkoutNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- Navbar Content -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="checkoutNavbar">
+
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="products.html">
+
+                        Products
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="cart.html">
+
+                        Cart
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="orders.html">
+
+                        Orders
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="notifications.html">
+
+                        Notifications
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <a
+                href="profile.html"
+                class="btn btn-primary account-button">
+
+                My Account
+
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+     ===================================================== -->
+
+<main>
+
+    <div class="container py-5">
+
+
+        <!-- Page Header -->
+
+        <div class="checkout-header mb-4">
+
+            <div>
+
+                <h1>
+                    Checkout
+                </h1>
+
+                <p>
+                    Complete your order by providing your delivery
+                    and payment information.
+                </p>
+
+            </div>
+
+
+            <a
+                href="cart.html"
+                class="btn btn-outline-primary">
+
+                ← Back to Cart
+
+            </a>
+
+        </div>
+
+
+
+        <div class="row g-4">
+
+
+            <!-- =================================================
+                 LEFT SIDE
+                 ================================================= -->
+
+            <div class="col-lg-8">
+
+
+                <!-- =============================================
+                     SHIPPING ADDRESS
+                     ============================================= -->
+
+                <section class="checkout-card mb-4">
+
+
+                    <div class="section-heading">
+
+                        <div class="section-number">
+                            1
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Shipping Address
+                            </h3>
+
+                            <p>
+                                Select the address where you want
+                                your order delivered.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <!-- Address 1 -->
+
+                    <div class="address-option selected">
+
+                        <div class="address-radio">
+
+                            <input
+                                type="radio"
+                                name="address"
+                                id="address1"
+                                checked>
+
+                        </div>
+
+
+                        <label
+                            for="address1"
+                            class="address-content">
+
+
+                            <div class="address-top">
+
+                                <strong>
+                                    Home
+                                </strong>
+
+                                <span class="address-badge">
+                                    Default
+                                </span>
+
+                            </div>
+
+
+                            <p>
+                                Mahad Abrar
+                            </p>
+
+                            <p>
+                                House 25, Street 10
+                            </p>
+
+                            <p>
+                                Faisalabad, Punjab, Pakistan
+                            </p>
+
+                            <p>
+                                Phone: +92 300 1234567
+                            </p>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Address 2 -->
+
+                    <div class="address-option">
+
+                        <div class="address-radio">
+
+                            <input
+                                type="radio"
+                                name="address"
+                                id="address2">
+
+                        </div>
+
+
+                        <label
+                            for="address2"
+                            class="address-content">
+
+
+                            <div class="address-top">
+
+                                <strong>
+                                    Office
+                                </strong>
+
+                            </div>
+
+
+                            <p>
+                                Mahad Abrar
+                            </p>
+
+                            <p>
+                                Office 12, Main Boulevard
+                            </p>
+
+                            <p>
+                                Lahore, Punjab, Pakistan
+                            </p>
+
+                            <p>
+                                Phone: +92 300 1234567
+                            </p>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Add Address -->
+
+                    <a
+                        href="addresses.html"
+                        class="add-address">
+
+                        + Add New Address
+
+                    </a>
+
+                </section>
+
+
+
+                <!-- =============================================
+                     ORDER ITEMS
+                     ============================================= -->
+
+                <section class="checkout-card mb-4">
+
+
+                    <div class="section-heading">
+
+                        <div class="section-number">
+                            2
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Order Items
+                            </h3>
+
+                            <p>
+                                Review the products in your order.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <!-- Product 1 -->
+
+                    <article class="checkout-product">
+
+
+                        <div class="product-image">
+
+                            💻
+
+                        </div>
+
+
+                        <div class="product-details">
+
+                            <h4>
+                                Gaming Laptop
+                            </h4>
+
+                            <p>
+                                Product ID: 1
+                            </p>
+
+                            <p>
+                                Quantity: 1
+                            </p>
+
+                        </div>
+
+
+                        <div class="product-price">
+
+                            <span>
+                                Rs. 150,000
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Product 2 -->
+
+                    <article class="checkout-product">
+
+
+                        <div class="product-image">
+
+                            🖱️
+
+                        </div>
+
+
+                        <div class="product-details">
+
+                            <h4>
+                                Wireless Mouse
+                            </h4>
+
+                            <p>
+                                Product ID: 2
+                            </p>
+
+                            <p>
+                                Quantity: 2
+                            </p>
+
+                        </div>
+
+
+                        <div class="product-price">
+
+                            <span>
+                                Rs. 6,000
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+
+                <!-- =============================================
+                     PAYMENT METHOD
+                     ============================================= -->
+
+                <section class="checkout-card">
+
+
+                    <div class="section-heading">
+
+                        <div class="section-number">
+                            3
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Payment Method
+                            </h3>
+
+                            <p>
+                                Choose how you want to pay for your order.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <!-- Cash on Delivery -->
+
+                    <div class="payment-option selected">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            id="cod"
+                            checked>
+
+
+                        <label
+                            for="cod"
+                            class="payment-content">
+
+                            <div class="payment-icon">
+                                💵
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Cash on Delivery
+                                </strong>
+
+                                <span>
+                                    Pay when your order arrives.
+                                </span>
+
+                            </div>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Credit Card -->
+
+                    <div class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            id="creditCard">
+
+
+                        <label
+                            for="creditCard"
+                            class="payment-content">
+
+                            <div class="payment-icon">
+                                💳
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Credit Card
+                                </strong>
+
+                                <span>
+                                    Pay securely using your credit card.
+                                </span>
+
+                            </div>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Debit Card -->
+
+                    <div class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            id="debitCard">
+
+
+                        <label
+                            for="debitCard"
+                            class="payment-content">
+
+                            <div class="payment-icon">
+                                💳
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Debit Card
+                                </strong>
+
+                                <span>
+                                    Pay securely using your debit card.
+                                </span>
+
+                            </div>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- JazzCash -->
+
+                    <div class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            id="jazzcash">
+
+
+                        <label
+                            for="jazzcash"
+                            class="payment-content">
+
+                            <div class="payment-icon">
+                                📱
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    JazzCash
+                                </strong>
+
+                                <span>
+                                    Pay using your JazzCash account.
+                                </span>
+
+                            </div>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- EasyPaisa -->
+
+                    <div class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            id="easypaisa">
+
+
+                        <label
+                            for="easypaisa"
+                            class="payment-content">
+
+                            <div class="payment-icon">
+                                📱
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    EasyPaisa
+                                </strong>
+
+                                <span>
+                                    Pay using your EasyPaisa account.
+                                </span>
+
+                            </div>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Stripe -->
+
+                    <div class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            id="stripe">
+
+
+                        <label
+                            for="stripe"
+                            class="payment-content">
+
+                            <div class="payment-icon">
+                                💳
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Stripe
+                                </strong>
+
+                                <span>
+                                    Pay securely through Stripe.
+                                </span>
+
+                            </div>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- PayPal -->
+
+                    <div class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            id="paypal">
+
+
+                        <label
+                            for="paypal"
+                            class="payment-content">
+
+                            <div class="payment-icon">
+                                🅿️
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    PayPal
+                                </strong>
+
+                                <span>
+                                    Pay securely through PayPal.
+                                </span>
+
+                            </div>
+
+                        </label>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RIGHT SIDE - ORDER SUMMARY
+                 ================================================= -->
+
+            <div class="col-lg-4">
+
+
+                <div class="checkout-card summary-card">
+
+
+                    <div class="summary-heading">
+
+                        <h3>
+                            Order Summary
+                        </h3>
+
+                        <span>
+                            2 Items
+                        </span>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <!-- Subtotal -->
+
+                    <div class="summary-row">
+
+                        <span>
+                            Total Quantity
+                        </span>
+
+                        <strong>
+                            3
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Total Price
+                        </span>
+
+                        <strong>
+                            Rs. 156,000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Discount
+                        </span>
+
+                        <strong class="discount">
+                            - Rs. 15,600
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Delivery
+                        </span>
+
+                        <strong>
+                            Free
+                        </strong>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <!-- Total -->
+
+                    <div class="summary-total">
+
+                        <span>
+                            Total Amount
+                        </span>
+
+                        <strong>
+                            Rs. 140,400
+                        </strong>
+
+                    </div>
+
+
+                    <!-- Place Order -->
+
+                    <button
+                        type="button"
+                        class="btn btn-primary place-order-btn">
+
+                        Place Order
+
+                    </button>
+
+
+                    <p class="secure-text">
+
+                        🔒 Your order information is secure.
+
+                    </p>
+
+
+                    <a
+                        href="cart.html"
+                        class="continue-cart">
+
+                        ← Return to Cart
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="checkout-footer">
+
+    <div class="container">
+
+        <p class="mb-0 text-center">
+
+            © 2026 ECommerce Store.
+            All rights reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JavaScript -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>

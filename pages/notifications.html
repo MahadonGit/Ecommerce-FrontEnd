@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Notifications - ECommerce</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Shared Account CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/account.css">
+
+
+    <!-- Notifications CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/notifications.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+     ========================================= -->
+
+<nav class="navbar navbar-expand-lg profile-navbar">
+
+    <div class="container">
+
+
+        <!-- Logo -->
+
+        <a
+            class="navbar-brand"
+            href="../index.html">
+
+            ECommerce
+
+        </a>
+
+
+        <!-- Mobile Navbar Button -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#profileNavbar"
+            aria-controls="profileNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- Navbar -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="profileNavbar">
+
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                <!-- Products -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="products.html">
+
+                        Products
+
+                    </a>
+
+                </li>
+
+
+                <!-- Cart -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="cart.html">
+
+                        Cart
+
+                    </a>
+
+                </li>
+
+
+                <!-- Orders -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="orders.html">
+
+                        Orders
+
+                    </a>
+
+                </li>
+
+
+                <!-- Notifications -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="notifications.html">
+
+                        Notifications
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <!-- My Account -->
+
+            <div class="d-flex gap-2">
+
+                <a
+                    href="profile.html"
+                    class="btn btn-primary profile-nav-button">
+
+                    My Account
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================
+     MAIN CONTENT
+     ========================================= -->
+
+<main>
+
+    <div class="container py-5">
+
+
+        <!-- Page Header -->
+
+        <div class="profile-page-header mb-4">
+
+            <div>
+
+                <h1>
+                    Notifications
+                </h1>
+
+                <p>
+                    Stay updated with your account and orders.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="btn btn-outline-primary">
+
+                Mark All as Read
+
+            </button>
+
+        </div>
+
+
+
+        <div class="row g-4">
+
+
+            <!-- =================================
+                 ACCOUNT SIDEBAR
+                 ================================= -->
+
+            <div class="col-lg-4">
+
+                <div class="account-card profile-sidebar text-center">
+
+
+                    <!-- Avatar -->
+
+                    <div class="profile-avatar">
+                        MA
+                    </div>
+
+
+                    <!-- Name -->
+
+                    <h3 class="profile-name">
+                        Mahad Abrar
+                    </h3>
+
+
+                    <!-- Email -->
+
+                    <p class="profile-email">
+                        mahad@example.com
+                    </p>
+
+
+                    <!-- Role -->
+
+                    <span class="profile-role">
+                        Customer
+                    </span>
+
+
+                    <hr>
+
+
+                    <!-- Account Navigation -->
+
+                    <div class="profile-menu">
+
+
+                        <!-- Profile -->
+
+                        <a href="profile.html">
+
+                            <span>👤</span>
+
+                            Profile
+
+                        </a>
+
+
+                        <!-- Addresses -->
+
+                        <a href="addresses.html">
+
+                            <span>📍</span>
+
+                            My Addresses
+
+                        </a>
+
+
+                        <!-- Orders -->
+
+                        <a href="orders.html">
+
+                            <span>📦</span>
+
+                            My Orders
+
+                        </a>
+
+
+                        <!-- Notifications -->
+
+                        <a
+                            href="notifications.html"
+                            class="active">
+
+                            <span>🔔</span>
+
+                            Notifications
+
+                        </a>
+
+
+                        <!-- Change Password -->
+
+                        <a href="change-password.html">
+
+                            <span>🔒</span>
+
+                            Change Password
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 NOTIFICATIONS CONTENT
+                 ================================= -->
+
+            <div class="col-lg-8">
+
+
+                <!-- Notification Summary -->
+
+                <div class="account-card mb-4">
+
+                    <div class="notification-summary">
+
+
+                        <div class="summary-icon">
+                            🔔
+                        </div>
+
+
+                        <div>
+
+                            <h5 class="mb-1">
+
+                                You have
+                                <strong>3 unread</strong>
+                                notifications
+
+                            </h5>
+
+
+                            <p class="mb-0 text-muted">
+
+                                Check your latest updates below.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Notification Filters -->
+
+                <div class="notification-filters mb-4">
+
+
+                    <button
+                        type="button"
+                        class="filter-btn active">
+
+                        All
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="filter-btn">
+
+                        Unread
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="filter-btn">
+
+                        Read
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- Notification List -->
+
+                <div class="notification-list">
+
+
+                    <!-- =================================
+                         NOTIFICATION 1
+                         ================================= -->
+
+                    <article class="notification-card unread">
+
+
+                        <div class="notification-status"></div>
+
+
+                        <div class="notification-content">
+
+
+                            <div class="notification-top">
+
+
+                                <div>
+
+                                    <h5 class="notification-card-title">
+
+                                        Order Confirmed
+
+                                    </h5>
+
+
+                                    <span class="notification-type">
+
+                                        Order
+
+                                    </span>
+
+                                </div>
+
+
+                                <span class="notification-time">
+
+                                    2 minutes ago
+
+                                </span>
+
+                            </div>
+
+
+                            <p class="notification-message">
+
+                                Your order #1234 has been confirmed
+                                and is being processed.
+
+                            </p>
+
+
+                            <button
+                                type="button"
+                                class="notification-action">
+
+                                Mark as read
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================
+                         NOTIFICATION 2
+                         ================================= -->
+
+                    <article class="notification-card unread">
+
+
+                        <div class="notification-status"></div>
+
+
+                        <div class="notification-content">
+
+
+                            <div class="notification-top">
+
+
+                                <div>
+
+                                    <h5 class="notification-card-title">
+
+                                        Payment Successful
+
+                                    </h5>
+
+
+                                    <span class="notification-type">
+
+                                        Payment
+
+                                    </span>
+
+                                </div>
+
+
+                                <span class="notification-time">
+
+                                    1 hour ago
+
+                                </span>
+
+                            </div>
+
+
+                            <p class="notification-message">
+
+                                Your payment of Rs. 14,999 was
+                                successfully processed.
+
+                            </p>
+
+
+                            <button
+                                type="button"
+                                class="notification-action">
+
+                                Mark as read
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================
+                         NOTIFICATION 3
+                         ================================= -->
+
+                    <article class="notification-card unread">
+
+
+                        <div class="notification-status"></div>
+
+
+                        <div class="notification-content">
+
+
+                            <div class="notification-top">
+
+
+                                <div>
+
+                                    <h5 class="notification-card-title">
+
+                                        Welcome to ECommerce
+
+                                    </h5>
+
+
+                                    <span class="notification-type">
+
+                                        Account
+
+                                    </span>
+
+                                </div>
+
+
+                                <span class="notification-time">
+
+                                    Yesterday
+
+                                </span>
+
+                            </div>
+
+
+                            <p class="notification-message">
+
+                                Thank you for creating your account.
+                                Welcome to our ECommerce store!
+
+                            </p>
+
+
+                            <button
+                                type="button"
+                                class="notification-action">
+
+                                Mark as read
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================
+                         NOTIFICATION 4
+                         ================================= -->
+
+                    <article class="notification-card read">
+
+
+                        <div class="notification-status"></div>
+
+
+                        <div class="notification-content">
+
+
+                            <div class="notification-top">
+
+
+                                <div>
+
+                                    <h5 class="notification-card-title">
+
+                                        Email Confirmed
+
+                                    </h5>
+
+
+                                    <span class="notification-type">
+
+                                        Account
+
+                                    </span>
+
+                                </div>
+
+
+                                <span class="notification-time">
+
+                                    2 days ago
+
+                                </span>
+
+                            </div>
+
+
+                            <p class="notification-message">
+
+                                Your email address has been successfully
+                                confirmed.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- Empty State -->
+
+                <div class="empty-notifications d-none">
+
+
+                    <div class="empty-icon">
+                        🔔
+                    </div>
+
+
+                    <h4>
+                        No Notifications
+                    </h4>
+
+
+                    <p>
+                        You're all caught up!
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
+
+<footer class="profile-footer">
+
+    <div class="container">
+
+        <div class="text-center">
+
+            <p class="mb-0">
+
+                © 2026 ECommerce Store.
+                All rights reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JavaScript -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>

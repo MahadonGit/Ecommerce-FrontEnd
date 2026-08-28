@@ -9,7 +9,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Order Details - ECommerce</title>
+    <title>My Orders - ECommerce</title>
 
 
     <!-- Bootstrap CSS -->
@@ -26,11 +26,11 @@
         href="../css/account.css">
 
 
-    <!-- Order Details CSS -->
+    <!-- Orders CSS -->
 
     <link
         rel="stylesheet"
-        href="../css/order-details.css">
+        href="../css/orders.css">
 
 </head>
 
@@ -181,27 +181,17 @@
 
         <div class="profile-page-header mb-4">
 
-
             <div>
 
                 <h1>
-                    Order Details
+                    My Orders
                 </h1>
 
                 <p>
-                    View the details of your order.
+                    View and manage your previous orders.
                 </p>
 
             </div>
-
-
-            <a
-                href="orders.html"
-                class="btn btn-outline-primary">
-
-                ← Back to Orders
-
-            </a>
 
         </div>
 
@@ -320,270 +310,37 @@
 
 
             <!-- =================================
-                 ORDER DETAILS CONTENT
+                 ORDERS CONTENT
                  ================================= -->
 
             <div class="col-lg-8">
 
 
-                <!-- =================================
-                     ORDER INFORMATION
-                     ================================= -->
-
-                <div class="account-card mb-4">
-
-
-                    <div class="profile-section-header">
-
-                        <div>
-
-                            <h4>
-                                Order #1001
-                            </h4>
-
-                            <p>
-                                Placed on August 25, 2026
-                            </p>
-
-                        </div>
-
-
-                        <span class="order-status completed">
-
-                            Completed
-
-                        </span>
-
-                    </div>
-
-
-                    <hr>
-
-
-                    <div class="order-meta">
-
-
-                        <div>
-
-                            <span>
-                                Customer ID
-                            </span>
-
-                            <strong>
-                                15
-                            </strong>
-
-                        </div>
-
-
-                        <div>
-
-                            <span>
-                                Order Date
-                            </span>
-
-                            <strong>
-                                August 25, 2026
-                            </strong>
-
-                        </div>
-
-
-                        <div>
-
-                            <span>
-                                Order Status
-                            </span>
-
-                            <strong>
-                                Completed
-                            </strong>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =================================
-                     ORDER ITEMS
-                     ================================= -->
-
-                <div class="account-card mb-4">
-
-
-                    <div class="profile-section-header">
-
-                        <div>
-
-                            <h4>
-                                Order Items
-                            </h4>
-
-                            <p>
-                                Products included in this order.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <hr>
-
-
-                    <!-- Product 1 -->
-
-                    <article class="order-product">
-
-
-                        <div class="product-icon">
-                            💻
-                        </div>
-
-
-                        <div class="product-info">
-
-                            <h5>
-                                Gaming Laptop
-                            </h5>
-
-                            <p>
-                                Product ID: 1
-                            </p>
-
-                            <p>
-                                Quantity: 1
-                            </p>
-
-                        </div>
-
-
-                        <div class="product-price">
-
-                            <span>
-                                Rs. 150,000
-                            </span>
-
-                            <strong>
-                                Rs. 150,000
-                            </strong>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- Product 2 -->
-
-                    <article class="order-product">
-
-
-                        <div class="product-icon">
-                            🖱️
-                        </div>
-
-
-                        <div class="product-info">
-
-                            <h5>
-                                Wireless Mouse
-                            </h5>
-
-                            <p>
-                                Product ID: 2
-                            </p>
-
-                            <p>
-                                Quantity: 2
-                            </p>
-
-                        </div>
-
-
-                        <div class="product-price">
-
-                            <span>
-                                Rs. 3,000 × 2
-                            </span>
-
-                            <strong>
-                                Rs. 6,000
-                            </strong>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-
-
-                <!-- =================================
-                     ORDER SUMMARY
-                     ================================= -->
-
                 <div class="account-card">
 
 
+                    <!-- Section Header -->
+
                     <div class="profile-section-header">
 
                         <div>
 
                             <h4>
-                                Order Summary
+                                Order History
                             </h4>
 
                             <p>
-                                Complete pricing information for this order.
+                                View your recent orders and their status.
                             </p>
 
                         </div>
 
-                    </div>
 
+                        <span class="order-count">
 
-                    <hr>
+                            2 Orders
 
-
-                    <div class="summary-row">
-
-                        <span>
-                            Total Quantity
                         </span>
-
-                        <strong>
-                            3
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            Total Price
-                        </span>
-
-                        <strong>
-                            Rs. 156,000
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row discount">
-
-                        <span>
-                            Discount
-                        </span>
-
-                        <strong>
-                            - Rs. 15,600
-                        </strong>
 
                     </div>
 
@@ -591,32 +348,233 @@
                     <hr>
 
 
-                    <div class="summary-row total">
 
-                        <span>
-                            Total Amount
-                        </span>
+                    <!-- =================================
+                         ORDER 1
+                         ================================= -->
 
-                        <strong>
-                            Rs. 140,400
-                        </strong>
-
-                    </div>
+                    <article class="order-card">
 
 
-                    <!-- Back Button -->
+                        <!-- Order Header -->
 
-                    <div class="order-details-actions">
+                        <div class="order-card-header">
 
-                        <a
-                            href="orders.html"
-                            class="btn btn-primary">
 
-                            ← Back to My Orders
+                            <div>
 
-                        </a>
+                                <h5>
+                                    Order #1001
+                                </h5>
 
-                    </div>
+                                <small>
+                                    August 25, 2026
+                                </small>
+
+                            </div>
+
+
+                            <span class="order-status completed">
+
+                                Completed
+
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- Order Information -->
+
+                        <div class="order-info">
+
+
+                            <div class="order-info-item">
+
+                                <span>
+                                    Total Quantity
+                                </span>
+
+                                <strong>
+                                    3
+                                </strong>
+
+                            </div>
+
+
+                            <div class="order-info-item">
+
+                                <span>
+                                    Total Price
+                                </span>
+
+                                <strong>
+                                    Rs. 156,000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="order-info-item">
+
+                                <span>
+                                    Discount
+                                </span>
+
+                                <strong>
+                                    Rs. 15,600
+                                </strong>
+
+                            </div>
+
+
+                            <div class="order-info-item">
+
+                                <span>
+                                    Total Amount
+                                </span>
+
+                                <strong>
+                                    Rs. 140,400
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Order Action -->
+
+                        <div class="order-card-footer">
+
+
+                            <a
+                                href="order-details.html"
+                                class="btn btn-outline-primary btn-sm">
+
+                                View Order Details
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================
+                         ORDER 2
+                         ================================= -->
+
+                    <article class="order-card">
+
+
+                        <!-- Order Header -->
+
+                        <div class="order-card-header">
+
+
+                            <div>
+
+                                <h5>
+                                    Order #1002
+                                </h5>
+
+                                <small>
+                                    August 20, 2026
+                                </small>
+
+                            </div>
+
+
+                            <span class="order-status pending">
+
+                                Pending
+
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- Order Information -->
+
+                        <div class="order-info">
+
+
+                            <div class="order-info-item">
+
+                                <span>
+                                    Total Quantity
+                                </span>
+
+                                <strong>
+                                    2
+                                </strong>
+
+                            </div>
+
+
+                            <div class="order-info-item">
+
+                                <span>
+                                    Total Price
+                                </span>
+
+                                <strong>
+                                    Rs. 50,000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="order-info-item">
+
+                                <span>
+                                    Discount
+                                </span>
+
+                                <strong>
+                                    Rs. 5,000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="order-info-item">
+
+                                <span>
+                                    Total Amount
+                                </span>
+
+                                <strong>
+                                    Rs. 45,000
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Order Action -->
+
+                        <div class="order-card-footer">
+
+
+                            <a
+                                href="order-details.html"
+                                class="btn btn-outline-primary btn-sm">
+
+                                View Order Details
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
 
                 </div>
 

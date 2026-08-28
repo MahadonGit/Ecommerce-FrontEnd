@@ -1,0 +1,792 @@
+/* =========================================================
+   ORDER CONFIRMATION PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+:root {
+
+    --primary: #5b5ff0;
+    --primary-dark: #474bd8;
+    --secondary: #7c3aed;
+
+    --background: #f5f7fc;
+    --surface: #ffffff;
+
+    --text: #172033;
+    --text-secondary: #4b5563;
+    --muted: #7b8494;
+
+    --border: #e7eaf2;
+
+    --success: #16834b;
+
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(91, 95, 240, 0.12),
+            transparent 30%
+        ),
+        var(--background);
+
+    color: var(--text);
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.confirmation-navbar {
+
+    background: #ffffff;
+
+    border-bottom:
+        1px solid var(--border);
+
+    box-shadow:
+        0 4px 18px rgba(31, 41, 55, 0.05);
+
+}
+
+
+.confirmation-navbar .navbar-brand {
+
+    color: var(--text);
+
+    font-size: 1.45rem;
+
+    font-weight: 800;
+
+}
+
+
+.confirmation-navbar .navbar-brand:hover {
+
+    color: var(--primary);
+
+}
+
+
+.confirmation-navbar .nav-link {
+
+    margin: 0 0.2rem;
+
+    color: var(--text-secondary);
+
+    font-size: 0.9rem;
+
+    font-weight: 500;
+
+}
+
+
+.confirmation-navbar .nav-link:hover {
+
+    color: var(--primary);
+
+}
+
+
+.confirmation-navbar .btn-primary {
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding:
+        0.6rem 1rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+main {
+
+    flex: 1;
+
+}
+
+
+/* =========================================================
+   CONFIRMATION CARD
+   ========================================================= */
+
+.confirmation-card {
+
+    max-width: 850px;
+
+    margin:
+        0 auto;
+
+    padding:
+        3rem 2.5rem;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 55px rgba(31, 41, 55, 0.08);
+
+}
+
+
+/* =========================================================
+   SUCCESS ICON
+   ========================================================= */
+
+.success-icon {
+
+    width: 85px;
+
+    height: 85px;
+
+    margin:
+        0 auto 1.5rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(22, 131, 75, 0.10);
+
+    border:
+        2px solid rgba(22, 131, 75, 0.18);
+
+    color:
+        var(--success);
+
+    font-size: 2.5rem;
+
+    font-weight: 800;
+
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.confirmation-card h1 {
+
+    margin-bottom:
+        0.75rem;
+
+    color:
+        var(--text);
+
+    font-size:
+        2.3rem;
+
+    font-weight:
+        800;
+
+}
+
+
+.confirmation-message {
+
+    max-width:
+        600px;
+
+    margin:
+        0 auto 1.8rem;
+
+    color:
+        var(--muted);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.7;
+
+}
+
+
+/* =========================================================
+   ORDER NUMBER
+   ========================================================= */
+
+.order-number-box {
+
+    max-width:
+        350px;
+
+    margin:
+        0 auto 2rem;
+
+    padding:
+        1rem;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        1rem;
+
+    border:
+        1px solid rgba(91, 95, 240, 0.15);
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(91, 95, 240, 0.06);
+
+}
+
+
+.order-number-box span {
+
+    color:
+        var(--muted);
+
+    font-size:
+        0.85rem;
+
+}
+
+
+.order-number-box strong {
+
+    color:
+        var(--primary);
+
+    font-size:
+        1.1rem;
+
+}
+
+
+/* =========================================================
+   ORDER INFORMATION
+   ========================================================= */
+
+.order-info {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        1rem;
+
+    margin-bottom:
+        2rem;
+
+}
+
+
+.info-item {
+
+    padding:
+        1rem;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        13px;
+
+    background:
+        #fafbfe;
+
+}
+
+
+.info-item span {
+
+    display:
+        block;
+
+    margin-bottom:
+        0.4rem;
+
+    color:
+        var(--muted);
+
+    font-size:
+        0.78rem;
+
+}
+
+
+.info-item strong {
+
+    color:
+        var(--text);
+
+    font-size:
+        0.9rem;
+
+}
+
+
+.info-item .status {
+
+    color:
+        #b7791f;
+
+}
+
+
+/* =========================================================
+   SUMMARY BOX
+   ========================================================= */
+
+.summary-box {
+
+    padding:
+        1.5rem;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        16px;
+
+    background:
+        #ffffff;
+
+}
+
+
+.summary-box h4 {
+
+    margin-bottom:
+        1.2rem;
+
+    color:
+        var(--text);
+
+    font-size:
+        1.15rem;
+
+    font-weight:
+        750;
+
+}
+
+
+.summary-row {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        1rem;
+
+    padding:
+        0.55rem 0;
+
+    color:
+        var(--text-secondary);
+
+    font-size:
+        0.9rem;
+
+}
+
+
+.summary-row strong {
+
+    color:
+        var(--text);
+
+}
+
+
+.summary-box hr {
+
+    margin:
+        1rem 0;
+
+    border:
+        0;
+
+    border-top:
+        1px solid var(--border);
+
+    opacity:
+        1;
+
+}
+
+
+.summary-row.discount {
+
+    color:
+        var(--success);
+
+}
+
+
+.summary-row.discount strong {
+
+    color:
+        var(--success);
+
+}
+
+
+.summary-row.total {
+
+    padding-top:
+        0.9rem;
+
+    font-size:
+        1.05rem;
+
+    font-weight:
+        700;
+
+}
+
+
+.summary-row.total strong {
+
+    color:
+        var(--primary);
+
+    font-size:
+        1.2rem;
+
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.confirmation-actions {
+
+    margin-top:
+        2rem;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        0.75rem;
+
+}
+
+
+.confirmation-actions .btn {
+
+    min-height:
+        46px;
+
+    padding:
+        0.65rem 1.1rem;
+
+    border-radius:
+        10px;
+
+    font-size:
+        0.88rem;
+
+    font-weight:
+        650;
+
+}
+
+
+.confirmation-actions .btn-primary {
+
+    border:
+        none;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    box-shadow:
+        0 7px 18px rgba(91, 95, 240, 0.18);
+
+}
+
+
+.confirmation-actions .btn-primary:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-dark),
+            var(--secondary)
+        );
+
+}
+
+
+.confirmation-actions .btn-outline-primary {
+
+    color:
+        var(--primary);
+
+    border-color:
+        rgba(91, 95, 240, 0.35);
+
+}
+
+
+.confirmation-actions .btn-outline-primary:hover {
+
+    background:
+        var(--primary);
+
+    color:
+        #ffffff;
+
+}
+
+
+.confirmation-actions .btn-outline-secondary {
+
+    color:
+        var(--text-secondary);
+
+    border-color:
+        #d8dce6;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.confirmation-footer {
+
+    margin-top:
+        auto;
+
+    padding:
+        1.5rem 0;
+
+    border-top:
+        1px solid var(--border);
+
+    background:
+        rgba(255, 255, 255, 0.85);
+
+    color:
+        var(--muted);
+
+    font-size:
+        0.78rem;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .confirmation-card {
+
+        padding:
+            2.2rem 1.5rem;
+
+    }
+
+
+    .confirmation-card h1 {
+
+        font-size:
+            2rem;
+
+    }
+
+
+    .order-info {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .confirmation-card {
+
+        padding:
+            1.8rem 1rem;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    .success-icon {
+
+        width:
+            70px;
+
+        height:
+            70px;
+
+        font-size:
+            2rem;
+
+    }
+
+
+    .confirmation-card h1 {
+
+        font-size:
+            1.7rem;
+
+    }
+
+
+    .confirmation-message {
+
+        font-size:
+            0.9rem;
+
+    }
+
+
+    .order-number-box {
+
+        flex-direction:
+            column;
+
+        gap:
+            0.4rem;
+
+        text-align:
+            center;
+
+    }
+
+
+    .summary-box {
+
+        padding:
+            1rem;
+
+    }
+
+
+    .summary-row {
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .confirmation-actions {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .confirmation-actions .btn {
+
+        width:
+            100%;
+
+    }
+
+}

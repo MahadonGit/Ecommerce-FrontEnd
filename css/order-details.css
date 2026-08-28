@@ -1,0 +1,233 @@
+/* =========================================
+   ORDER DETAILS PAGE
+   ========================================= */
+
+
+/* =========================================
+   ORDER STATUS
+   ========================================= */
+
+.order-status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.order-status.completed {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+
+/* =========================================
+   ORDER META INFORMATION
+   ========================================= */
+
+.order-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.order-meta div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.order-meta span {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.order-meta strong {
+    color: #212529;
+    font-size: 0.95rem;
+}
+
+
+/* =========================================
+   ORDER PRODUCT
+   ========================================= */
+
+.order-product {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.order-product:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+
+/* =========================================
+   PRODUCT ICON
+   ========================================= */
+
+.product-icon {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background-color: #f1f5ff;
+
+    font-size: 24px;
+}
+
+
+/* =========================================
+   PRODUCT INFORMATION
+   ========================================= */
+
+.product-info {
+    flex: 1;
+}
+
+.product-info h5 {
+    margin-bottom: 5px;
+    color: #212529;
+    font-weight: 600;
+}
+
+.product-info p {
+    margin-bottom: 3px;
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+
+/* =========================================
+   PRODUCT PRICE
+   ========================================= */
+
+.product-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.product-price span {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.product-price strong {
+    color: #212529;
+    font-size: 0.95rem;
+}
+
+
+/* =========================================
+   ORDER SUMMARY
+   ========================================= */
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 0;
+}
+
+.summary-row span {
+    color: #6c757d;
+}
+
+.summary-row strong {
+    color: #212529;
+}
+
+.summary-row.discount strong {
+    color: #dc3545;
+}
+
+.summary-row.total {
+    padding-top: 15px;
+}
+
+.summary-row.total span {
+    color: #212529;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.summary-row.total strong {
+    color: #0d6efd;
+    font-size: 1.2rem;
+}
+
+
+/* =========================================
+   ACTIONS
+   ========================================= */
+
+.order-details-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .order-meta {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .order-product {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .product-price {
+        width: 100%;
+        align-items: flex-start;
+        margin-left: 71px;
+    }
+
+    .order-details-actions {
+        justify-content: stretch;
+    }
+
+    .order-details-actions .btn {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .order-product {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    .product-price {
+        grid-column: 2;
+        margin-left: 0;
+    }
+
+}
